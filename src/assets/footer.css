@@ -1,0 +1,45 @@
+/* Dodajte ovo u vaš footer.css */
+.footer {
+    position: static; /* Drži footer na dnu stranice */
+    bottom: 0; /* Poravnaj sa dnom */
+    left: 0; /* Poravnaj sa levim ivicom */
+    width: 100%; /* Širina 100% */
+    padding: 20px 0; /* Dodaj padding da se sadržaj ne lepi uz ivice */
+    height: auto;
+    background-color: var(--px-transparent); /* Pozadina može biti transparentna ili odabrana boja */
+    color: var(--px-bababa); /* Boja teksta */
+    text-align: center; /* Centriraj tekst unutar footera */
+}
+
+/* Dodaj klasu za centriranje sadržaja unutar footera */
+.footer-content {
+    display: flex; /* Koristi flexbox za raspoređivanje */
+    flex-direction: column; /* Rasporedi elemente u kolonu */
+    align-items: center; /* Centriraj elemente horizontalno */
+}
+
+/* Razmak između ikona i teksta */
+.social-links {
+    margin-bottom: 10px; /* Dodaj razmak ispod socijalnih ikona */
+}
+
+.social-links a {
+    margin: 0 10px; /* Razmak između ikona */
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--px-theme); /* Promeni boju linkova */
+    transition: color 0.3s; /* Glatka promena boje pri hover efektu */
+}
+
+.footer a:hover {
+    color: var(--px-theme); /* Promena boje na hover */
+}
+
+/* Stilovi za mobilne uređaje */
+@media (max-width: 768px) {
+    .footer {
+        padding: 10px 0; /* Manji padding za mobilne uređaje */
+    }
+}

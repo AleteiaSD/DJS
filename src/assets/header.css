@@ -1,0 +1,368 @@
+/* src/assets/header.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Obezbeđuje da padding i margine ne utiču na širinu/visinu */
+}
+
+body{
+  color: black;
+  overflow-x: hidden; /* Onemogućava horizontalno skrolovanje */
+}
+.container{
+  position: relative; /* Obezbeđuje da video bude ispod ostalih elemenata */
+  width: 100%;
+  height: auto;
+  overflow: hidden; /* Sakriva sve što izlazi izvan kontejnera */
+ /* background-image: url("../../public/photos/background/homepagetransparent.png");*/ background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; /* Spreči ponavljanje slike */
+  padding-top: 0;
+  text-transform: uppercase; /* Tekst u tim kolonama je uppercase */
+  font-weight:bolder;
+  
+}
+header {
+  position: fixed; /* Obezbeđuje da se header prikazuje iznad slike i ostane na vrhu prilikom skrolovanja */
+  top: 0; /* Pozicionira header na vrh stranice */
+  left: 0; /* Pozicionira header na levo */
+  width: 100%; /* Širina header-a da bude 100% */
+  z-index: 1; /* Osigurava da je header iznad pozadinskog sadržaja */
+  padding: 20px 0; /* Dodaj padding da se sadržaj ne lepi uz ivice */
+  background-color: var(--px-transparent); /* Transparentna pozadina */
+}
+
+
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+span{
+  color: var(--px-theme);
+}
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 10px 15px;
+}
+nav ul li a{
+  text-decoration: none;
+  transition: 0.5s;
+}
+nav ul li a:hover{
+  color: var(--px-theme);
+}
+
+
+
+.social-links {
+  display: flex;
+  justify-content: center; /* Ikone centrirane u prvoj koloni */
+  list-style-type: none;
+}
+.social-links a {
+  color: var(--px-bababa);
+  margin: 0 4px;
+  font-size: 18px;
+}
+.social-links a:hover {
+  color: var(--px-theme);
+}
+
+
+
+
+.logo {
+  flex: 1; /* Omogućava da logo zauzme dostupni prostor */
+  text-align: center; /* Centriraj tekst unutar loga */
+}
+/* Ispravke visine slike */
+.logo img {
+  max-width: 100%; /* Prilagoditi sliku širini */
+  height: auto; /* Održati proporcije */
+}
+
+
+
+
+.nav-container {
+  display: flex; /* Koristi flex za horizontalni raspored */
+  justify-content: center; /* CEntriraj elemente horizontalno */
+   /*list-style-type: none; Ukloni stil sa liste */
+  padding: 0; /* Ukloni padding */
+  margin: 0; /* Ukloni marginu */
+}
+.nav-links {
+  display: flex; /* Koristi flex za horizontalni raspored */
+  justify-content: center; /* CEntriraj elemente horizontalno */
+  align-items: center; /* CEntriraj vertikalno (ako je potrebno) */
+  /*flex-wrap: nowrap;  Spreči da se lome u novi red */
+  list-style-type: none; /* Ukloni stil sa liste */
+  padding: 0; /* Ukloni padding */
+  margin: 0; /* Ukloni marginu */
+}
+.nav-links li {
+  margin: 0 20px; /* Dodaj jednak razmak između linkova */
+}
+.nav-links li a {
+  color: var(--px-bababa); /* Boja linkova */
+  text-decoration: none; /* Ukloni podvlačenje */
+  font-size: 18px; /* Veličina teksta */
+  transition: color 0.3s; /* Glatka promena boje pri hover efektu */
+}
+.nav-links li a:hover {
+  color: var(--px-theme); /* Promeni boju na hover */
+}
+
+
+
+
+.hb-top-fixed {
+  padding: 10px 0; /* Dodaj malo padding-a za bolji izgled */
+}
+.left-side, .logo, .hb-top-fixed {
+  text-align: center; /* Centriraj sadržaj unutar svake kolone */
+}
+
+
+
+.hb-lang {
+  margin-left: auto; /* Automatski margini za centriranje */
+}
+.hb-lang li {
+  display: inline-block; /* Osiguraj da su list itemi u redu */
+}
+.hb-lang li + li {
+  margin-left: 10px; /* Razmak između list itema */
+}
+
+.hb-lang li.active{
+  background: var(--px-theme); /* Boja pozadine pri hover efektu */
+  border-radius: 5px; /* Zaobljeni uglovi */
+  color: var(--px-bababa); /* Promeni boju teksta na hover */
+}
+.hb-lang .link-button {
+  justify-content: center;
+}
+
+.link-button {
+
+  display: flex; /* Aktivirajte flexbox */
+  background: var(--px-transparent); /* Bez pozadinske boje */
+  border: 2px solid var(--px-theme); /* Dodajte ivicu boje */
+  color: var(--px-bababa); /* Boja teksta */
+  text-decoration: none; /* Ukloni podvlačenje */
+  font-size: 14px; /* Veličina teksta */
+  font-weight: bold; /* Učini tekst podebljanim */
+  cursor: pointer; /* Pokazivač kada se pređe mišem */
+  padding: 10px 15px; /* Dodajte padding za bolji izgled */
+  border-radius: 5px; /* Zaobljeni uglovi */
+  transition: background 0.3s, color 0.3s; /* Tranzicija za pozadinsku boju i boju teksta */
+  text-align: center; /* Centrirajte tekst unutar dugmeta */
+}
+
+.link-button.active {
+  background: var(--px-theme); /* Pozadinska boja za aktivni jezik */
+  color: var(--px-bababa); /* Boja teksta za aktivni jezik */
+}
+
+.link-button:hover {
+  background: var(--px-bababa); /* Pozadinska boja na hover */
+  color: var(--px-theme); /* Promena boje teksta na hover */
+}
+
+
+
+
+
+
+
+
+.menu-toggle {
+  display: none; /* Sakrivena na većim ekranima */
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -250px; /* Sakrij bočni meni */
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.side-menu.open {
+  right: 0; /* Kada je meni otvoren, pomeri ga na desnu stranu */
+}
+
+.side-menu .nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 50px 0 0 0;
+  text-align: center;
+}
+
+.side-menu .nav-links li {
+  margin: 15px 0;
+}
+
+.side-menu .nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+.side-menu .nav-links li a:hover {
+  color: var(--px-theme);
+}
+
+
+
+
+.side-menu .hb-lang-sidebar {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+/* Prikaz jezika u side-menu da budu u redu */
+.side-menu .hb-lang-sidebar .nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Razmak između SR i EN */
+}
+
+.side-menu .hb-lang-sidebar .nav li {
+  display: inline-block; /* Prikazuje SR i EN u jednom redu */
+}
+
+.side-menu .hb-lang-sidebar .nav a {
+  color: var(--px-bababa);
+  font-size: 14px;
+  padding: 5px 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.side-menu .hb-lang-sidebar .nav a:hover,
+.side-menu .hb-lang-sidebar .nav li.active a {
+  background: var(--px-theme);
+  border-radius: 5px;
+  color: var(--px-bababa);
+}
+
+
+
+
+
+/* Ikonica za otvaranje menija na manjim ekranima */
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--px-bababa);
+  position: absolute; /* Pozicioniraj apsolutno unutar header-a */
+  right: 5%; /* Odmak od desne ivice */
+  top: 17.5%; /* Vertikalno centriranje */
+}
+
+
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .col-md-4 {
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center; /* Centriraj social linkove */
+    list-style-type: none;
+    margin: 10px 0 0 0; /* Ukloni marginu */ /* Razmak iznad */
+    padding: 0; /* Ukloni padding */
+    text-align: center; /* Centriraj sadržaj unutar roditeljskog kontejnera */
+  }
+
+  .social-links .contact-tel-header {
+    display: inline-block; /* Uveri se da su ikone inline-block */
+    text-decoration: none; /* Ukloni podvlačenje */
+    font-size: 18px; /* Veličina teksta */
+    font-weight: bold; /* Podebljan tekst */
+    transition: color 0.3s; /* Glatka promena boje pri hover efektu */
+  }
+
+  .hb-lang {
+    display: none; /* Sakrij na manjim ekranima */
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-container {
+    display: none;
+  }
+  /* Prikaži hb-lang u bočnom meniju samo na manjim ekranima */
+  .side-menu .hb-lang-sidebar {
+    display: flex;
+  }
+}
+
+@media (max-width: 1127px) {
+  .contact-tel-header {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  /* Prikazuje samo na većim ekranima */
+  .side-menu {
+    display: none;
+  }
+  .nav-container {
+    display: flex;
+  }
+  .menu-icon {
+    display: none;
+  }
+  .hb-lang-sidebar {
+    display: none; /* Sakrij ovu sekciju na većim ekranima */
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px 0;
+  }
+
+  .nav-links li {
+    margin: 5px 0;
+  }
+
+  .hb-lang a {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+
+  .social-links a {
+    font-size: 16px;
+    margin: 0 2px;
+  }
+}

@@ -1,0 +1,187 @@
+/* Onemogući horizontalno skrolovanje */
+body {
+  overflow-x: hidden; /* Onemogućava horizontalno skrolovanje */
+}
+.background-image {
+  position: absolute; /* Pozicionira sliku apsolutno u odnosu na kontejner */
+  top: 0; /* Početna pozicija slike */
+  left: 0; /* Početna pozicija slike */
+  max-width: 100%; /* Širina slike da bude 100% */
+  height: 100%; /* Visina slike da bude 100% */
+  object-fit: cover; /* Održava proporcije slike bez izobličenja */
+  z-index: 0; /* Osigurava da slika bude pozadinska */
+  box-sizing: border-box;
+  
+}
+.about-us-container {
+    position: relative;
+
+    top: 20vh; /* Pomeranje teksta naniže ispod header-a */
+    overflow-y: auto;
+    height: 80vh;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.about-us-container::-webkit-scrollbar {
+  width: 8px; /* Širina skrol trake */
+}
+
+.about-us-container::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5); /* Boja "thumb" dela skrol trake */
+  border-radius: 10px; /* Zaobljenost */
+}
+
+.about-us-container::-webkit-scrollbar-track {
+  background: transparent; /* Pozadina skrol trake */
+}
+
+
+  .about-us {
+      margin-bottom: 40px; /* Primenjeno za @include down-md */
+      max-width: 100%;
+      margin: 0 auto; /* Centrira sadržaj */
+      padding: 0 10px; /* Dodaj padding da se sadržaj ne lepi za ivice */
+
+    }
+    
+    .about-us .img-in {
+      border-radius: 50%;
+      max-width: 356px;
+      max-height: 358px;
+      margin: auto;
+      overflow: hidden;
+      border: 5px solid #ffffff; /* Zameni $px-white sa stvarnom vrednošću */
+    }
+    
+    .theme-light .about-us .img-in {
+      border: 5px solid var(--px-bababa); /* Zameni $px-theme sa stvarnom vrednošću */
+    }
+    
+    .about-us .img {
+      position: relative;
+    }
+    
+    .about-us .info {
+      text-align: center;
+      padding-top: 40px;
+      color: #ffffff; /* Zameni $px-white sa stvarnom vrednošću */
+    }
+    
+    .theme-light .about-us .info {
+      color: var(--px-theme); /* Zameni $px-dark sa stvarnom vrednošću */
+    }
+    
+    .about-us .info h3 {
+      font-weight: 500;
+      font-size: 30px;
+      max-width: 100%;
+    }
+    
+    .about-us .info p {
+      margin: 0;
+      font-size: 16px;
+      max-width: 100%;
+    }
+    
+    .about-us .social-icons {
+      position: absolute;
+      bottom: -14px;
+      left: 0;
+      right: 0;
+    }
+    
+    .about-us .social-icons a {
+      width: 35px;
+      height: 35px;
+      line-height: 31px;
+      background: #ffffff; /* Zameni $px-white sa stvarnom vrednošću */
+      border: 2px solid #ffffff; /* Zameni $px-white sa stvarnom vrednošću */
+      color: var(--px-theme); /* Zameni $px-dark sa stvarnom vrednošću */
+      text-align: center;
+      border-radius: 50%;
+      position: relative;
+      margin: 0 5px;
+      transition: ease all 0.35s; /* Zameni @include transition sa CSS transition */
+    }
+    
+    .theme-light .about-us .social-icons a {
+      background: var(--px-theme); /* Zameni $px-dark sa stvarnom vrednošću */
+      color: #ffffff; /* Zameni $px-white sa stvarnom vrednošću */
+    }
+    
+    .about-us .social-icons a i {
+      line-height: inherit;
+    }
+    
+    .about-us .social-icons a:nth-child(1) { /* facebook */
+      top: -5px;
+    }
+    
+    .about-us .social-icons a:nth-child(2) { /* instagram */
+      top: 0px;
+    }
+    
+    .about-us .social-icons a:nth-child(3) { /* tiktok */
+      top: -5px;
+    }
+    
+    .about-us .social-icons a:hover {
+      transform: scale(1.1); /* Zameni @include scale sa CSS transform */
+      background: var(--px-theme); /* Zameni $px-theme sa stvarnom vrednošću */
+      color: #e00000; /* Zameni $px-white sa stvarnom vrednošću */
+    }
+    
+    .about-info{
+      color: var(--px-bababa);
+    }
+    .about-info .title {
+      margin-bottom: 30px;
+    }
+    
+    .about-info .info-list {
+      padding-top: 15px;
+    }
+    
+    .about-info .info-list ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    
+    .about-info .info-list li {
+      padding: 4px 0;
+    }
+    
+    .about-info .info-list label {
+      color: #ffffff; /* Zameni $px-white sa stvarnom vrednošću */
+      margin: 0;
+      font-weight: 500;
+      padding-right: 10px;
+    }
+    
+    .theme-light .about-info .info-list label {
+      color: var(--px-theme); /* Zameni $px-dark sa stvarnom vrednošću */
+    }
+    .title{
+      color: var(--px-bababa);
+    }
+
+    .feature-box-container{
+      color: var(--px-bababa);
+    }
+    
+
+    @media (max-width: 768px) {
+      .about-us-container {
+        padding: 0 10px; /* Daj malo paddinga da se sadržaj ne lepi za ivice */
+      }
+      
+      .about-us .info {
+        padding: 20px; /* Povećaj padding unutar info dela */
+      }
+      
+      .about-us .social-icons {
+        bottom: -10px; /* Prilagodi poziciju ikona za društvene mreže */
+      }
+    }
+    

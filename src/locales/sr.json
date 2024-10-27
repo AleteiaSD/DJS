@@ -1,0 +1,188 @@
+{
+    "header.home": "Početna",
+    "header.aboutUs": "O nama",    
+    "header.events": "Nastupi",
+    "header.gallery": "Galerija",
+    "header.experience": "Iskustvo",
+    "header.contactUs": "Kontaktirajte nas",
+
+    "slider.hello": "Zdravo, mi smo",
+    "slider.name": "DJs Taki i Kibo ",
+    "slider.designation": "1000+ žurki",
+    "slider.description":  "Dobrodošli u svet zvuka sa DJs Taki i Kibo! Naša strast za muzikom transcendirala je granice, donoseći vam nezaboravne trenutke uz ritmove različitih žanrova. Prepustite se našem muzičkom putovanju i doživite energiju koja će vas podići na novi nivo. Sa spojem talenta i iskustva, stvaramo magične trenutke za vaše uši. Zajedno sa nama, svaki događaj postaje nezaboravan doživljaj. Zvukovi koji povezuju srca - dobrodošli u svet DJs Taki i Kibo!",
+    "slider.text1": "1000+ žurki",
+    "slider.text2": "Neponovljiva atmosfera",
+    "slider.text3": "Muzički doživljaj koji će vas oduševiti",
+    "slider.text4": "Najnoviji hitovi i omiljeni klasici u našem izvođenju",
+    "slider.text5": "Iskustvo koje se pamti - pridružite nam se na jedinstvenom putovanju kroz zvuk i ritam",
+
+    "about.biography": "Biografija",
+    
+    "about.text1": "DJs Taki i Kibo su dinamični duo koji zajedno čine nezaboravno iskustvo muzičke ekstaze.",
+    "about.text2": "Strastveni smo ljubitelji muzike sa bogatim iskustvom u umetnosti stvaranja neponovljivih trenutaka kroz zvuk i ritam.",
+    "about.text3": "DJ 'Taki', sa svojim inovativnim pristupom muzici, ima dugu i uspešnu karijeru.",
+    "about.text4": "Oduvek je bio fasciniran raznolikošću zvuka.",
+    "about.text5": "Njegova muzička putanja počela je kao mladi talent, a danas je poznat po svojoj sposobnosti da stvori savršen spoj između tradicionalnog i modernog, ostavljajući publiku bez daha na svakom nastupu.",
+    "about.text6": "Sa druge strane, Kibo, pravo muzičko čudo, poseduje neobičan osećaj za ritam i harmoniju.",
+    "about.text7": "Njegov muzički ukus široko obuhvata sve žanrove, od elektronske dance muzike do klasičnog roka.",
+    "about.text8": "Kibo je majstor u preplitanju različitih muzičkih elemenata, stvarajući nezaboravno iskustvo za svakog slušaoca.",
+    "about.text9": "Kao duo, DJs Taki i Kibo su stvorili autentičan potpis zvuka koji prožima različite muzičke žanrove.",
+    "about.text10": "Njihova saradnja donosi jedinstven spoj energije i emocija na svakom nastupu.",
+    "about.text11": "Sa preko hiljadu žurki iza sebe, ova dva di-džeja su postala sinonim za vrhunsku zabavu i nezaboravno muzičko putovanje.",
+    "about.text12": "Naša strast prema muzici ne poznaje granice, misija je jednostavna - povezivanje ljudi kroz zvuk.",
+    "about.text13": "Mi smo ne samo di-džejevi, već i kustosi nezaboravnih trenutaka i doživljaja kroz muziku.",
+      
+    "about.djs": "DJs",
+    "about.TakiKibo": "Taki & Kibo",
+    
+    "about.whatWeDo": "Čime se bavimo?",
+
+    
+    "music.trance": "Trance",
+    "music.tranceDescription": "Trance muzika karakteriše hipnotičke melodije i repetitivni ritmovi, stvarajući uronjeno i euforično iskustvo.",
+    "music.house": "House",
+    "music.houseDescription": "House muzika je poznata po stabilnom 4/4 ritmu i repetitivnim ritmovima, često sadrži duhovne vokale i elektronske elemente.",
+    "music.deepHouse": "Deep House",
+    "music.deepHouseDescription": "Deep House je podžanr house muzike poznat po duhovnom i atmosferičnom zvuku, karakterističan po sporim tempima i melodičnim bas linijama.",
+    "music.electro": "Electro",
+    "music.electroDescription": "Electro muzika karakteriše intenzivna upotreba sintisajzera i ritam mašina, stvarajući futuristički i energetski zvuk sa fokusom na elektronskim elementima.",
+    "music.folk": "Folk",
+    "music.folkDescription": "Folk muzika predstavlja tradicionalne i kulturne zvuke određenog regiona, često sadrži akustične instrumente i tekstove sa elementima pričanja.",
+    "music.90s": "90e",
+    "music.90sDescription": "90s muzika odražava raznolike muzičke stilove devedesetih, obuhvatajući grunge, alternativni rok, pop i hip-hop, definišući dinamičnu eru u istoriji muzike.",
+    "music.techno": "Techno",
+    "music.technoDescription": "Techno muzika karakteriše repetitivni ritmovi, sintetički zvukovi i futuristička atmosfera, stvarajući energetsko i plesno iskustvo.",
+    "music.exYu": "Ex-Jugoslavija",
+    "music.exYuDescription": "Ex-Jugoslavija muzika obuhvata raznoliko muzičko nasleđe bivših jugoslovenskih zemalja, spajajući različite folklorne tradicije sa modernim uticajima.",
+    "music.2000s": "2000s",
+    "music.2000sDescription": "2000s muzika hvata eklektičnu mešavinu žanrova i stilova koja se pojavila početkom 21. veka, uključujući pop, rok, hip-hop i elektronsku muziku.",
+        
+
+    "experience.experience": "Iskustvo",
+    "experience.educationSkills": "Obrazovanje i veštine",
+
+    "experience.jobPosition1": "Softverski inženjer",
+    "experience.jobType1": "Pripravništvo | Hibridno",
+    "experience.jobDuration1": "Maj 2023",
+    "experience.timeDuration1": "Puno radno vreme",
+    "experience.jobDescription1": "Tokom pripravništva, radio sam sa tehnologijama koje se koriste u okviru Levi9 Technology Services. Zadatak je bio kreiranje dve WebAPI i servisa za sinhronizaciju podataka između API servisa. Tim u kojem sam radio implementirao je autorizovanu WebAPI u programskom jeziku C# (.Net Core WebAPI), zajedno sa unit testovima (NUnit, Moq) i integracionim testovima.\n\nCilj ovog zadatka bio je da se upoznam sa procesom implementacije od početnog zahteva do konačnog rešenja. Tokom implementacije koristio sam alate Swashbuckle, Swagger i Postman za testiranje. API je razvijen u skladu sa smernicama REST API-ja, a za skladištenje podataka korišćena je MS SQL Express baza podataka, čija je šema modelirana pomoću Entity Framework-a.\n\nNakon uspešne implementacije API servisa, radio sam na razvoju React veb aplikacije koja prikazuje funkcionalnosti implementiranog backend-a. Tokom ovog zadatka koristio sam GIT kao sistem za kontrolu verzija, praveći branch-ove za svaki pojedinačni zadatak.\n\nPripravništvo je sprovedeno u timu od 6 studenata, gde smo morali sarađivati i koordinisati implementaciju i dodelu zadataka.",
+
+    "experience.jobPosition2": "Angular Web Developer",
+    "experience.jobType2": "Freelance",
+    "experience.jobDuration2": "Sep 2022 - Dec 2022",
+    "experience.timeDuration2": "Nepuno radno vreme",    
+    "experience.jobDescription2": "Tokom ovog perioda radio sam samostalno kao freelance Angular Web Developer, posebno na projektu \"Auto škola Tovariški.\" Projekat je obuhvatao razvoj veb sajta za auto školu koristeći Angular okvir, sa ciljem pružanja sveobuhvatnih informacija i poboljšanja korisničkog iskustva potencijalnim učenicima.\n\nU ovom projektu sam iskoristio svoje znanje Angulara, zajedno sa HTML, CSS i JavaScript-om, kako bih kreirao vizualno privlačan i dinamičan veb sajt. Sajt je uključivao sekcije poput \"O nama\", gde su posetioci mogli saznati o istoriji i vrednostima auto škole, i \"Kategorije\", koje prikazuju različite kurseve vožnje. Dodatno, sekcija \"Galerija\" je sadržala slike vozila, učenika i prostorija. Sekcija \"Koraci za polaganje\" objašnjavala je proces polaganja vozačkog ispita, dok je sekcija \"Često postavljena pitanja\" pružala odgovore na uobičajene upite. Sekcija \"Kontakt\" omogućavala je posetiocima da se povežu sa auto školom.\n\nTokom procesa razvoja, fokusirao sam se na optimizaciju performansi veb sajta, osiguravajući responsivnost na različitim uređajima i kreirajući intuitivni korisnički interfejs koristeći moćne funkcionalnosti Angulara. Implementirao sam komponente, servise i rutiranje kako bih stvorio besprekorno korisničko iskustvo u pretraživanju. Takođe, integrisao sam relevantan sadržaj i slike kako bih poboljšao ukupno korisničko iskustvo.\n\nRad na projektu Auto škola Tovariški omogućio mi je da pokažem svoje veštine kao Angular Web Developer, demonstrirajući sposobnost da iskoristim mogućnosti Angulara za izgradnju dinamičnih i angažovanih veb aplikacija. Uspješno sam isporučio projekat u okviru navedenog vremenskog okvira, zadovoljavajući zahteve klijenta i doprinoseći ukupnom uspehu online prisustva auto škole.\n\nNapomena: Navedene informacije zasnovane su na detaljima koje ste pružili o svom radu na veb sajtu Auto škole Tovariški kao freelance Angular Web Developer-u. Slobodno prilagodite sadržaj kako biste tačno prikazali svoje iskustvo i doprinose.",
+
+    "experience.passingYear1": "2017-2023",
+    "experience.degreeTitle1": "Fakultet tehničkih nauka, Univerzitet u Novom Sadu",
+    "experience.instituteName1": "Primenjeno softversko inženjerstvo",
+    "experience.passingYear2": "2013-2017",
+    "experience.degreeTitle2": "Tehnička škola \"Mihajlo Pupin\", Inđija",
+    "experience.instituteName2": "Elektrotehničar računara",
+
+    "skill.name1": "C#",
+    "skill.name2": ".NET Framework",
+    "skill.name3": "ASP.NET MVC",
+    "skill.name4": "ASP.NET Web API",
+    "skill.name5": "Angular",
+    "skill.name6": "React",
+    "skill.name7": "HTML",
+    "skill.name8": "CSS",
+    "skill.name9": "Swashbuckle Swagger",
+    "skill.name10": "Postman",
+    "skill.name11": "Poznavanje sistema za kontrolu verzija (Git, TFVC)",
+    "skill.name12": "Testiranje i osiguranje kvaliteta (NUnit, Moq, integracioni testovi)",
+    "skill.name13": "JavaScript",
+    "skill.name14": "Baze podataka",
+    "skill.name15": "C/C++",
+    "skill.name16": "Python",
+
+    "portfolio.name": "Galerija",
+    "portfolio.tabList1": "Zurka 1",
+    "portfolio.tabList2": "Zurka 2",
+    "portfolio.tabList3": "Zurka 3",
+    "portfolio.tabList4": "Zurka 4",
+    "portfolio.tabList5": "Zurka 5",
+    "portfolio.tabList6": "Zurka 6",
+
+    "portfolio.img1": "/pictures/background.jpg",
+    "portfolio.img2": "/pictures/DJTaki.png",
+    "portfolio.img3": "/pictures/DJKibo.png",
+    "portfolio.img4": "/pictures/DJTaki.jpg",
+    "portfolio.img5": "/pictures/DJKibo.jpg",
+    "portfolio.img6": "/pictures/DJTaki.png",
+    "portfolio.img7": "/pictures/DJKibo.png",
+    "portfolio.img8": "/pictures/DJTaki.png",
+    "portfolio.img9": "/pictures/DJKibo.png",
+
+
+   
+
+
+    "portfolio.title1": "Titl 1",
+    "portfolio.title2": "Titl 2",
+    "portfolio.title3": "Titl 3",
+    "portfolio.title4": "Titl 4",
+    "portfolio.title5": "Titl 5",
+    "portfolio.title6": "Titl 6",
+    "portfolio.title7": "Titl 7",    
+    "portfolio.title8": "Titl 8",
+    "portfolio.title9": "Titl 9",
+
+    "portfolio.subTitle1": "Subtitle 1",
+    "portfolio.subTitle2": "Subtitle 2",
+    "portfolio.subTitle3": "Subtitle 3",
+    "portfolio.subTitle4": "Subtitle 4",
+    "portfolio.subTitle5": "Subtitle 5",
+    "portfolio.subTitle6": "Subtitle 6",
+    "portfolio.subTitle7": "Subtitle 7",
+    "portfolio.subTitle8": "Subtitle 8",
+    "portfolio.subTitle9": "Subtitle 9",
+   
+    "portfolio.alternativetext1": "Alternative Text 1",
+    "portfolio.alternativetext2": "Alternative Text 2",
+    "portfolio.alternativetext3": "Alternative Text 3",
+    "portfolio.alternativetext4": "Alternative Text 4",
+    "portfolio.alternativetext5": "Alternative Text 5",
+    "portfolio.alternativetext6": "Alternative Text 6",
+    "portfolio.alternativetext7": "Alternative Text 7",
+    "portfolio.alternativetext8": "Alternative Text 8",
+    "portfolio.alternativetext9": "Alternative Text 9",
+    
+    "portfolio.link1": "Link 1",
+    "portfolio.link2": "Link 2",
+    "portfolio.link3": "Link 3",
+    "portfolio.link4": "Link 4",
+    "portfolio.link5": "Link 5",
+    "portfolio.link6": "Link 6",
+    "portfolio.link7": "Link 7",
+    "portfolio.link8": "Link 8",
+    "portfolio.link9": "Link 9",
+
+
+
+
+
+    "contactme.name": "Kontaktirajte nas",
+    "contact.toastSuccess": "Poruka uspešno poslata!",
+    "contact.toastError": "Došlo je do greške. Molimo pokušajte ponovo kasnije.",
+
+    "contact.fullName": "Ime",
+    "contact.emailAddress": "Vaša Email adresa",
+    "contract.subject":"Naslov",
+    "contact.typeComment": "Unesite poruku",
+
+    "contact.fullNameRequired": "Ime je obavezno",
+    "contact.emailAddressRequired": "Email je obavezan",
+    "contact.emailAddressRequiredMessage": "Uneta vrednost ne odgovara formatu email adrese",
+    "contract.subjectRequired":"Naslov je obavezan",
+    "contact.typeCommentRequired": "Poruka je obavezna",
+
+    "contact.sendMessageBtn": "Pošalji poruku",
+
+
+    "contactinfo.h4": "Koja je vaša priča?",
+    "contactinfo.p": "Uvek smo dostupni da napravimo najbolju žurku u gradu.\n\nSlobodno nas kontaktirajte.",
+    "footer.developedBy": "Web sajt razvio"
+}
+  

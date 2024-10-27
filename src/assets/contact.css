@@ -1,0 +1,7 @@
+.contact-section{
+    
+    position: relative;
+
+    top: 20vh; /* Pomeranje teksta naniže ispod header-a */
+    margin: 5%;
+}
