@@ -27,7 +27,7 @@ const AboutUs = () => {
 
             <div className="col-lg-7 ml-auto" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
               <div className="about-info">
-                <div className="title"><h3>{t("about.biography")}</h3></div>
+                <div className="title1"><h3>{t("about.biography")}</h3></div>
 
                 <div className="about-text">
                 <p>{t("about.text1")}</p>
@@ -51,7 +51,7 @@ const AboutUs = () => {
 
           <div className="separated"></div>
 
-          <div className="title"><h3>{t("about.whatWeDo")}</h3></div>
+          <div className="title2"><h3>{t("about.whatWeDo")}</h3></div>
           <Services />        
         </div>
     </>

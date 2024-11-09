@@ -134,10 +134,9 @@ body {
     .about-info{
       color: var(--px-bababa);
     }
-    .about-info .title {
+    .about-info .title1, .title2 {
       margin-bottom: 30px;
     }
-    
     .about-info .info-list {
       padding-top: 15px;
     }
@@ -162,8 +161,21 @@ body {
     .theme-light .about-info .info-list label {
       color: var(--px-theme); /* Zameni $px-dark sa stvarnom vrednošću */
     }
-    .title{
+    .title1{
+      display: flex;
+      justify-content: center; /* Centriranje horizontalno */
+      align-items: center; /* Centriranje vertikalno */
+      margin-top: 5%;
       color: var(--px-bababa);
+      text-align: center;      
+    }
+    .title2{
+      display: flex;
+      justify-content: center; /* Centriranje horizontalno */
+      align-items: center; /* Centriranje vertikalno */
+      margin-top: 5%;
+      color: var(--px-bababa);
+      text-align: center;
     }
 
     .feature-box-container{
@@ -182,6 +194,29 @@ body {
       
       .about-us .social-icons {
         bottom: -10px; /* Prilagodi poziciju ikona za društvene mreže */
+      }
+
+      
+    }
+
+    @media(min-width: 991px){
+      .title1{
+        justify-content: left; /* Centriranje horizontalno */
+        text-align: left; 
+      }
+    }
+    @media (max-width: 991px) {
+      .title1,
+      .title2 {
+        display: flex;
+        justify-content: center; /* Centriranje horizontalno */
+        align-items: center; /* Centriranje vertikalno */
+        text-align: center;
+        margin-top: 5%;
+      }
+
+      .about-text {
+        margin: 0 10%; /* Odmakni sadržaj od leve i desne strane */
       }
     }
     

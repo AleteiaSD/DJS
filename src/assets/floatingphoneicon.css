@@ -1,18 +1,40 @@
 /* FloatingPhoneIcon.css */
+
 .floating-phone-icon {
-    position: fixed; /* Ova pozicija će držati ikonu u donjem levom uglu */
-    bottom: 20px; /* Razmak od donjeg ruba */
-    left: 20px; /* Razmak od leve ivice */
-    z-index: 1000; /* Postavi viši z-index da bude iznad ostalog sadržaja */
-    background-color: rgba(255, 255, 255, 0.8); /* Pozadina za ikonu */
-    border-radius: 50%; /* Da bude okrugla */
-    padding: 10px; /* Razmak unutar ikone */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Lagana senka */
-  }
-  
-  @media (min-width: 1128px) {
-    .floating-phone-icon {
-      display: none; /* Sakrij ikonu na većim ekranima */
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.8);; /* Zelena pozadina */
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    animation: pulse 1.5s infinite; /* Dodaj animaciju pulsiranja */
+    cursor: pointer; /* Promeni pokazivač miša na ikoni */
+}
+
+.floating-phone-icon a {
+    color: var(--px-phone-color) ; /* Boja ikone telefona */
+}
+
+/* Definisanje animacije */
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Početna veličina */
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);;
     }
-  }
-  
+    50% {
+        transform: scale(1.2); /* Veća veličina u sredini animacije */
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);;
+    }
+    100% {
+        transform: scale(1); /* Vraća se na početnu veličinu */
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);;
+    }
+}
+
+@media (min-width: 1128px) {
+    .floating-phone-icon {
+        display: none; /* Sakrij ikonu na većim ekranima */
+    }
+}
