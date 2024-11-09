@@ -12,20 +12,19 @@ const ContactSection = () => {
   return (
    <>
    <HeaderComponent/>
-      <section id="contactme" className="contact-section">
-        <div className="container">
+      <div className="contact-section">
           <div className="row">
             <div className="col-lg-5 col-xl-4 m-15px-tb" data-aos="fade-right" data-aos-duration="1200">
               <ContactInfo />
             </div>
             <div className="col-lg-7 ml-auto m-15px-tb" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
-              <div className="contact-form"><h4>{t("contactme.name")}</h4>
+              <div className="contact-form">
+                <h4>{t("contactme.name")}</h4>
               <Contact />
               </div>
             </div>
           </div>
-        </div>
-      </section>
+      </div>
 
     </>
   );

@@ -33,12 +33,12 @@ const Contact = () => {
         <div className="row">
           <div className="col-md-6">
             <div className="form-group mb-3">
-              <input type="text" className="form-control theme-light" placeholder={t("contact.fullName")} {...register("name", { required: true })}/>
+              <input type="text" className="form-control" placeholder={t("contact.fullName")} {...register("name", { required: true })}/>
               {errors.name && errors.name.type === "required" && (<span className="invalid-feedback">{t("contact.fullNameRequired")}</span>)}</div>
           </div>
           <div className="col-md-6">
             <div className="form-group mb-3">
-              <input type="email" className="form-control theme-light" placeholder={t("contact.emailAddress")}
+              <input type="email" className="form-control" placeholder={t("contact.emailAddress")}
                 {
                   ...register( "email",{ required: t("contact.emailAddressRequired"), pattern: { value: /\S+@\S+\.\S+/, message: t("contact.emailAddressRequiredMessage"),},},{ required: true })}/>
               {errors.email && (<span className="invalid-feedback">{errors.email.message}</span>)}
@@ -47,14 +47,14 @@ const Contact = () => {
           <div className="col-12">
             <div className="form-group mb-3">
               <input type="text"
-                className="form-control theme-light" placeholder={t("contract.subject")}
+                className="form-control" placeholder={t("contract.subject")}
                 {...register("subject", { required: true })}/>
               {errors.subject && (<span className="invalid-feedback">{t("contract.subjectRequired")}</span>)}
             </div>
           </div>
           <div className="col-12">
             <div className="form-group mb-3">
-              <textarea rows="4" className="form-control theme-light" placeholder={t("contact.typeComment")}
+              <textarea rows="4" className="form-control" placeholder={t("contact.typeComment")}
                 {...register("comment", { required: true })}></textarea>
               {errors.comment && (<span className="invalid-feedback">{t("contact.typeCommentRequired")}</span>)}
             </div>
