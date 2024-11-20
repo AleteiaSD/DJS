@@ -25,7 +25,8 @@ body {
   position: relative; /* Obezbeđuje da video bude ispod ostalih elemenata */
   width: 100%;
   height: auto;
- /* background-image: url("../../public/photos/background/homepagetransparent.png");*/ background-position: center;
+ /* background-image: url("../../public/photos/background/homepagetransparent.png");*/ 
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat; /* Spreči ponavljanje slike */
   padding-top: 0;

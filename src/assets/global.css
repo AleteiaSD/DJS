@@ -86,3 +86,18 @@ body {
     align-items: center; /* Centriraj sadržaj vertikalno */
     text-align: center; /* Centriraj tekst unutar kolona */
 }
+
+/* Prilagođeni skrol za celo telo i sve kontejnerske elemente sa skrolovanjem */
+::-webkit-scrollbar {
+    width: 8px; /* Širina skrol trake */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5); /* Boja skrol "thumb" dela */
+    border-radius: 10px; /* Zaobljenost "thumb" dela */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent; /* Pozadina skrol trake */
+  }
+  

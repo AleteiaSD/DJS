@@ -1,18 +1,4 @@
-/* Dodajemo osnovne stilove za celo telo i elemente koji sadrže sadržaj */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%; /* Podesi visinu tela da bude 100% */
-  width: 100%;
-  overflow-x: hidden; /* Isključujemo horizontalno skrolovanje */
-}
-/* Onemogući horizontalno skrolovanje */
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  overflow-y: auto; /* Omogućavamo vertikalno skrolovanje */
-}
+
 .background-image {
   position: absolute; /* Pozicionira sliku apsolutno u odnosu na kontejner */
   top: 0; /* Početna pozicija slike */
@@ -21,12 +7,15 @@ body {
   height: 100%; /* Visina slike da bude 100% */
   object-fit: cover; /* Održava proporcije slike bez izobličenja */
   z-index: 0; /* Osigurava da slika bude pozadinska */
-  box-sizing: border-box;  
+  box-sizing: border-box;
+  
 }
 .about-us-container {
     position: relative;
 
     top: 20vh; /* Pomeranje teksta naniže ispod header-a */
+    overflow-y: auto;
+    overflow-x: hidden;
     height: 80vh;
     max-width: 100%;
     box-sizing: border-box;
@@ -56,7 +45,7 @@ body {
     .about-us .img-in {
       border-radius: 50%;
       max-width: 356px;
-      max-height: 356px;
+      max-height: 358px;
       margin: auto;
       overflow: hidden;
       border: 5px solid #ffffff; /* Zameni $px-white sa stvarnom vrednošću */

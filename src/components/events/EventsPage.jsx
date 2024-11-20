@@ -14,21 +14,16 @@ const EventsPage = () => {
   useEffect(() => {
     const fetchCSV = async () => {
       try {
-        console.log(events); // Dodaj ovo kako bi proverio podatke pre renderovanja
-
-        const csvUrl = "https://raw.githubusercontent.com/AleteiaSD/DJS/master/Events.csv";
+       const csvUrl = "https://raw.githubusercontent.com/AleteiaSD/DJS/master/Events.csv";
         // Ispravan raw URL
         const response = await axios.get(csvUrl);
         const csvData = response.data;
-        console.log(csvData.EventName, csvData.Date,csvData.ImageURL,csvData.Description);
-        // Parsiranje CSV podataka
+         // Parsiranje CSV podataka
         Papa.parse(csvData, {
           header: true, // Oznaka da CSV ima zaglavlje (kolone)
           skipEmptyLines: true,
           complete: (result) => {
-            console.log(result.data); // Logujte celu strukturu podataka
-            console.log(result.EventName, result.Date, result.ImageURL, result.Description);
-            setEvents(result.data);
+                setEvents(result.data);
           },
         });
       } catch (err) {

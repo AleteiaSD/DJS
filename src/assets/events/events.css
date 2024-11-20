@@ -22,12 +22,13 @@ body {
   justify-content: center;
   padding: 20px;
   padding-top: 20vh;
-  background-color: #333;
+  background-color: var(--px-bg-1);
 }
 
 h2 {
   text-align: center;
   margin-bottom: 30px;
+  color: var(--px-theme);
 }
 
 /* Stil za listu događaja */
@@ -38,6 +39,7 @@ h2 {
   gap: 20px;
   width: 100%; /* Omogućava širenje liste na celokupan prostor */
   height: 100%;
+  
 }
 
 .event-item {
@@ -46,17 +48,17 @@ h2 {
   width: 80%;
   max-width: 1200px;
   padding: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--px-bg-2);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: var(--px-bg-2);
   justify-content: space-between;
   align-items: center;
 }
 
 .event-image {
   width: 150px;
-  height: 150px;
+  height: 300px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -64,17 +66,19 @@ h2 {
 .event-details {
   flex: 1;
   margin-left: 20px;
+
 }
 
 .event-details h3 {
   margin: 0;
   font-size: 1.5em;
-  color: #333;
+  color: var(--px-theme);
+
 }
 
 .event-details p {
   margin: 5px 0;
-  color: #666;
+  color: var(--px-bababa);
 }
 
 .event-details p:first-child {
