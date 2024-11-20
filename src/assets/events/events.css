@@ -1,32 +1,121 @@
+/* Dodajemo osnovne stilove za celo telo i elemente koji sadrže sadržaj */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Podesi visinu tela da bude 100% */
+  width: 100%;
+  overflow-x: hidden; /* Isključujemo horizontalno skrolovanje */
+}
+body {  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto; /* Omogućavamo vertikalno skrolovanje */
+  
+}
+
+/* Glavni stil za sekciju događaja */
 .events-section {
-    padding: 40px;
-    background-color: var(--px-bg-1);
-  }
-  
-  .events-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  padding-top: 20vh;
+  background-color: #333;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Stil za listu događaja */
+.events-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%; /* Omogućava širenje liste na celokupan prostor */
+  height: 100%;
+}
+
+.event-item {
+  display: flex;
+  flex-direction: row; /* Raspored u red sa slikom levo i podacima desno */
+  width: 80%;
+  max-width: 1200px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.event-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.event-details {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.event-details h3 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.event-details p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.event-details p:first-child {
+  font-weight: bold;
+}
+
+/* Responzivnost za mobilne uređaje */
+@media (max-width: 768px) {
   .event-item {
-    max-width: 300px;
-    background: var(--px-theme);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    flex-direction: column; /* Prebaci događaj u vertikalni raspored */
+    align-items: center; /* Centriraj sadržaj */
+    width: 90%; /* Smanji širinu za mobilne uređaje */
   }
-  
+
   .event-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+    width: 120px; /* Smanji veličinu slike */
+    height: 120px;
   }
-  
+
   .event-details {
-    padding: 20px;
-    color: var(--px-bababa);
+    margin-left: 0; /* Ukloni marginu s leve strane */
+    text-align: center; /* Centriraj tekst */
   }
-  
+
+  .event-details h3 {
+    font-size: 1.2em; /* Manji font za mobilne uređaje */
+  }
+}
+
+/* Responzivnost za vrlo male ekrane (telefon u portretnom režimu) */
+@media (max-width: 480px) {
+  .event-item {
+    width: 95%; /* Smanji širinu još više za ekrane male širine */
+  }
+
+  .event-image {
+    width: 100px; /* Još manja slika */
+    height: 100px;
+  }
+
+  .event-details h3 {
+    font-size: 1em; /* Manji font */
+  }
+}

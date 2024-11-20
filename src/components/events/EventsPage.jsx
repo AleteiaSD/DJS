@@ -10,11 +10,14 @@ const EventsPage = () => {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const fetchCSV = async () => {
       try {
-        const csvUrl = "https://github.com/AleteiaSD/DJS/blob/master/Events.csv"; // Ispravan raw URL
+        console.log(events); // Dodaj ovo kako bi proverio podatke pre renderovanja
+
+        const csvUrl = "https://raw.githubusercontent.com/AleteiaSD/DJS/master/Events.csv";
+        // Ispravan raw URL
         const response = await axios.get(csvUrl);
         const csvData = response.data;
         console.log(csvData.EventName, csvData.Date,csvData.ImageURL,csvData.Description);
@@ -24,6 +27,7 @@ const EventsPage = () => {
           skipEmptyLines: true,
           complete: (result) => {
             console.log(result.data); // Logujte celu strukturu podataka
+            console.log(result.EventName, result.Date, result.ImageURL, result.Description);
             setEvents(result.data);
           },
         });
@@ -36,7 +40,7 @@ const EventsPage = () => {
     };
 
     fetchCSV();
-  }, []);
+  }, [events]);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>{error}</div>;

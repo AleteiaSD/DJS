@@ -33,13 +33,28 @@
     --px-media-md: 991px;
     --px-media-lg: 1200px;
 }
-
+/* Dodajemo osnovne stilove za celo telo i elemente koji sadrže sadržaj */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Podesi visinu tela da bude 100% */
+    width: 100%;
+    overflow-x: hidden; /* Isključujemo horizontalno skrolovanje */
+  }
 /* Primer upotrebe varijabli */
 body {
     font-family: var(--px-font);
     font-size: var(--px-font-size);
     line-height: var(--px-line-height);
     color: var(--px-white);
+
+
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto; /* Omogućavamo vertikalno skrolovanje */
+    
 }
 
 /* Osnovni stil za redove */

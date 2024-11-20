@@ -4,16 +4,27 @@
   padding: 0;
   box-sizing: border-box; /* Obezbeđuje da padding i margine ne utiču na širinu/visinu */
 }
-
-body{
-  color: black;
-  overflow-x: hidden; /* Onemogućava horizontalno skrolovanje */
+/* Dodajemo osnovne stilove za celo telo i elemente koji sadrže sadržaj */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Podesi visinu tela da bude 100% */
+  width: 100%;
+  overflow-x: hidden; /* Isključujemo horizontalno skrolovanje */
 }
+body {  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto; /* Omogućavamo vertikalno skrolovanje */
+  
+  color: black;
+}
+
 .container{
   position: relative; /* Obezbeđuje da video bude ispod ostalih elemenata */
   width: 100%;
   height: auto;
-  overflow: hidden; /* Sakriva sve što izlazi izvan kontejnera */
  /* background-image: url("../../public/photos/background/homepagetransparent.png");*/ background-position: center;
   background-size: cover;
   background-repeat: no-repeat; /* Spreči ponavljanje slike */

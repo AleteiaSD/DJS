@@ -4,9 +4,20 @@
   box-sizing: border-box; /* Obezbeđuje da padding i margine ne utiču na širinu/visinu */
 }
 
+/* Dodajemo osnovne stilove za celo telo i elemente koji sadrže sadržaj */
 html, body {
-  height: 100%; /* Osigurava da html i body zauzimaju punu visinu prozora */
-  overflow: hidden; /* Sprečava skrolovanje */
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Podesi visinu tela da bude 100% */
+  width: 100%;
+  overflow-x: hidden; /* Isključujemo horizontalno skrolovanje */
+}
+body {  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto; /* Omogućavamo vertikalno skrolovanje */
+  
 }
 
 .background-container {
