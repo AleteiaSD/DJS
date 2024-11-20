@@ -1,0 +1,32 @@
+.events-section {
+    padding: 40px;
+    background-color: var(--px-bg-1);
+  }
+  
+  .events-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .event-item {
+    max-width: 300px;
+    background: var(--px-theme);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .event-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .event-details {
+    padding: 20px;
+    color: var(--px-bababa);
+  }
+  

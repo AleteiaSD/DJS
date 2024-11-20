@@ -8,8 +8,10 @@ import axios from "axios";
 const Contact = () => {
   const { t } = useTranslation();
   const { register, handleSubmit, formState: { errors }} = useForm();
+  const [isLoading, setIsLoading] = React.useState(false);
   const onSubmit = async (data, e) => { 
     try {
+      setIsLoading(true); // Pokreće indikator učitavanja
       const { name, email, subject, comment } = data;
 
       const emailData = {
@@ -24,11 +26,14 @@ const Contact = () => {
     } catch (error) {
       console.error(error);
       toast.error(t("contact.toastError"));
+    } finally {
+      setIsLoading(false); // Zaustavlja indikator učitavanja
     }
   };
 
   return (
     <>
+    <div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="row">
           <div className="col-md-6">
@@ -40,7 +45,15 @@ const Contact = () => {
             <div className="form-group mb-3">
               <input type="email" className="form-control" placeholder={t("contact.emailAddress")}
                 {
-                  ...register( "email",{ required: t("contact.emailAddressRequired"), pattern: { value: /\S+@\S+\.\S+/, message: t("contact.emailAddressRequiredMessage"),},},{ required: true })}/>
+                  ...register( "email",{ 
+                    required: t("contact.emailAddressRequired"),
+                    pattern: {
+                      value: /\S+@\S+\.\S+/, 
+                      message: t("contact.emailAddressRequiredMessage"),
+                      },
+                    },
+                    { required: true })}
+              />
               {errors.email && (<span className="invalid-feedback">{errors.email.message}</span>)}
             </div>
           </div>
@@ -60,10 +73,16 @@ const Contact = () => {
             </div>
           </div>
           <div className="col-12">
-            <div className="btn-bar"><button className="px-btn px-btn-white">{t("contact.sendMessageBtn")}</button></div>
+            <div className="btn-bar">
+              <button className="px-btn px-btn-white" disabled={isLoading}>
+                { isLoading ? t("contact.sending") : t("contact.sendMessageBtn")}
+              </button>
+            </div>
           </div>
         </div>
       </form>
+      </div>
+      
     </>
   );
 };

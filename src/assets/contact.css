@@ -1,7 +1,11 @@
 /* Base Styles for Contact Section */
 .contact-section {
     position: relative;
-    padding-top: 20vh;
+    min-height: 100vh; /* Sekcija zauzima najmanje visinu ekrana */
+    display: flex;
+    align-items: center; /* Vertikalno poravnanje */
+    justify-content: center; /* Horizontalno poravnanje */
+    padding: 0 10%; /* Dodaj margine sa strane */
     background-color: var(--px-bg-1);
 }
 
@@ -46,65 +50,46 @@
 
 /* Contact Form Styles */
 .contact-form {
-    padding-bottom: 20px;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-.form-control {
-    color: var(--px-bababa);
-    background: none;
-    border: 1px solid rgba(var(--px-white), 0.3);
-    border-radius: 0;
-    box-shadow: none;
-    font-size: 14px;
-    height: calc(2em + 0.75rem + 2px);
+    background-color: var(--px-bg-1); /* Plava pozadina forme */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px 30px;
+    text-align: center;
+    width: 100%;
 }
 
 
 .contact-form h4 {
-    font-size: 22px;
-    font-weight: 500;
     margin-bottom: 20px;
     color: var(--px-bababa);
 }
-.contact-form .form-control {
-    color: var(--px-bababa);
-    background-color: transparent;
-    border: 1px solid rgba(var(--px-white), 0.3);
-    border-radius: 0;
-    box-shadow: none;
-    font-size: 14px;
-    height: calc(2em + 0.75rem + 2px);
-    margin-bottom: 15px;
+.form-control{
+    color: rgb(214, 7, 7);
 }
+.contact-form .form-control {
+    background-color: var(--px-theme);
+    border: 2px solid var(--px-theme);
+    border-radius: 5px;
+    box-shadow: none;
+    font-size: 16px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+/* Fokusirano polje */
+.contact-form .form-control:focus {
+    color: pink; /* Tekst kada korisnik piše */
+    background-color: rgba(255, 255, 255, 0.1); /* Lagana pozadina */
+    border-color: pink; /* Roz ivice kada je aktivno */
+    outline: none;
+    box-shadow: 0 0 5px pink;
+}
+
 .contact-form .form-control.invalid {
     border-color: #dc3545 !important;
 }
 .contact-form textarea.form-control {
     height: auto;
 }
-
-
-
-.form-control.invalid {
-    border-color: #dc3545 !important;
-}
-
-.form-control{
-    color: var(--px-bababa);
-    border: 1px solid rgba(var(--px-bababa), 0.3);
-    background: var(--px-white);
-}
-.contact-form .form-control {
-    color: rgba(255, 255, 255, 0.73);
-    border-color: rgba(255, 255, 255, 0.3);
-    background: #1c1c1c;
-}
-
-
-
-
-
 
 
 

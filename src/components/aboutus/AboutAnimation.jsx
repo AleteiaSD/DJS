@@ -2,6 +2,8 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import Social from "./Social";
 import Services from "./ServiceAnimation";
+
+import Footer from "../footer/FooterAnimation";
 import "../../assets/aboutus/aboutus.css";
 const AboutUs = () => {
   const { t } = useTranslation();
@@ -51,8 +53,9 @@ const AboutUs = () => {
 
           <div className="separated"></div>
 
-          <div className="title2"><h3>{t("about.whatWeDo")}</h3></div>
-          <Services />        
+         
+         
+        <Footer/>       
         </div>
     </>
   );

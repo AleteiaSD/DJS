@@ -7,6 +7,7 @@ import AboutUs from "../components/aboutus/AboutAnimation";
 import ContactSection from "../components/contact/ContactSection";
 import HeaderComponent from "../components/headercomponent/HeaderComponent";
 import FloatingPhoneIcon from "../components/floatingphoneicon/FloatingPhoneIcon";
+import InstagramGallery from "../components/gallery/InstagramGallery";
 const AllRoutes = () => {
   return (
     <>
@@ -18,9 +19,10 @@ const AllRoutes = () => {
 
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="*" element={<NotFound />} />
-        <Route path="aboutus" element={<AboutUs />} />        
-        <Route path="contact" element={<ContactSection />} />
+        <Route path="*" element={<NotFound/>} />
+        <Route path="aboutus" element={<AboutUs/>} />             
+        <Route path="gallery" element={<InstagramGallery/>} />   
+        <Route path="contact" element={<ContactSection/>} />
       </Routes>
 
      

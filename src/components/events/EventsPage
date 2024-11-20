@@ -1,0 +1,58 @@
+import React, { useEffect, useState } from "react";
+import Papa from "papaparse";
+import axios from "axios";
+
+const EventsPage = () => {
+  const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchCSV = async () => {
+      try {
+        const csvUrl = "YOUR_RAW_CSV_FILE_URL"; // Zameni sa URL-om svog fajla
+        const response = await axios.get(csvUrl);
+        const csvData = response.data;
+
+        // Parsiranje CSV podataka
+        Papa.parse(csvData, {
+          header: true, // Oznaka da CSV ima zaglavlje (kolone)
+          skipEmptyLines: true,
+          complete: (result) => {
+            setEvents(result.data);
+          },
+        });
+      } catch (err) {
+        console.error("Error loading CSV:", err);
+        setError("Unable to load events. Please try again later.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchCSV();
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>{error}</div>;
+
+  return (
+    <div className="events-section">
+      <h2>Upcoming Events</h2>
+      <div className="events-list">
+        {events.map((event, index) => (
+          <div key={index} className="event-item">
+            <img src={event.ImageURL} alt={event.EventName} className="event-image" />
+            <div className="event-details">
+              <h3>{event.EventName}</h3>
+              <p>{event.Date}</p>
+              <p>{event.Description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default EventsPage;
