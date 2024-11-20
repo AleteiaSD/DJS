@@ -10,7 +10,7 @@ const EventsPage = () => {
   useEffect(() => {
     const fetchCSV = async () => {
       try {
-        const csvUrl = "https://raw.githubusercontent.com/AleteiaSD/DJS/refs/heads/master/Events.csv?token=GHSAT0AAAAAACZS5UDFL2HYJCZHVF5PTH4AZZ54E3A"; // Zameni sa URL-om svog fajla
+        const csvUrl = "https://github.com/AleteiaSD/DJS/blob/master/Events.csv"; // Zameni sa URL-om svog fajla
         const response = await axios.get(csvUrl);
         const csvData = response.data;
 
