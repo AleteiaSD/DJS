@@ -8,6 +8,7 @@ import ContactSection from "../components/contact/ContactSection";
 import HeaderComponent from "../components/headercomponent/HeaderComponent";
 import FloatingPhoneIcon from "../components/floatingphoneicon/FloatingPhoneIcon";
 import InstagramGallery from "../components/gallery/InstagramGallery";
+import EventsPage from "../components/events/EventsPage";
 const AllRoutes = () => {
   return (
     <>
@@ -20,7 +21,8 @@ const AllRoutes = () => {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="*" element={<NotFound/>} />
-        <Route path="aboutus" element={<AboutUs/>} />             
+        <Route path="aboutus" element={<AboutUs/>} />         
+        <Route path="events" element={<EventsPage/>} />            
         <Route path="gallery" element={<InstagramGallery/>} />   
         <Route path="contact" element={<ContactSection/>} />
       </Routes>
