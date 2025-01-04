@@ -1,13 +1,111 @@
-.gallery {
-    display: grid;
+/* Opšti stil za Instagram galeriju */
+.instagram-gallery-section {
+  padding: 100px 50px;
+  background: #f9f9f9;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, var(--px-theme), var(--px-gradient-end));
+}
+
+.gallery-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Kontejner za slike */
+.instagram-gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+/* Stil za pojedinačne slike */
+.instagram-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instagram-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.5s ease;
+}
+
+/* Hover Efekti */
+.instagram-item:hover img {
+  transform: scale(1.1); /* Uvećanje slike */
+}
+
+.instagram-item:hover {
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Povećana senka */
+}
+
+/* Efekat tamnog sloja preko slike */
+.instagram-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.instagram-item:hover::after {
+  opacity: 1;
+}
+
+/* Tekst na slici (opciono) */
+.instagram-item .image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.instagram-item:hover .image-caption {
+  opacity: 1;
+}
+
+
+/* Prilagodba za tablete */
+@media (max-width: 768px) {
+  .instagram-gallery-container {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-    background-color: aqua;
   }
-  
-  .gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+
+  .gallery-title {
+    font-size: 2rem;
   }
-  
+}
+
+/* Prilagodba za mobilne uređaje */
+@media (max-width: 576px) {
+  .instagram-gallery-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .gallery-title {
+    font-size: 1.8rem;
+  }
+}

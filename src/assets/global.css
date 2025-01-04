@@ -8,7 +8,8 @@
     --px-font-alt: "Roboto", serif;
 
     --px-transparent: var(--px-transparent);
-    --px-theme: #ff8801;
+    --px-theme: #6a11cb;
+    --px-gradient-end: #2575fc;
     --px-bababa: #bababa;
     --px-dark: #1c1c1c;
     --px-white: #fff;
@@ -23,7 +24,7 @@
     --px-line-height: 1.7;
     --px-red: #ff0000;
 
-    --px-phone-color: #ff8801;
+    --px-phone-color: #2b0058;
     
 
 
@@ -39,7 +40,7 @@ html, body {
     padding: 0;
     height: 100%; /* Podesi visinu tela da bude 100% */
     width: 100%;
-    overflow-x: hidden; /* Isključujemo horizontalno skrolovanje */
+    overflow-x: hidden;
   }
 /* Primer upotrebe varijabli */
 body {
@@ -53,38 +54,20 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    overflow-y: auto; /* Omogućavamo vertikalno skrolovanje */
+    overflow: -moz-scrollbars-none; /* Sakriva skrol trake u Firefoxu */
+  -ms-overflow-style: none; /* Sakriva skrol trake u Internet Exploreru i Edgeu */
+  scrollbar-width: none; /* Sakriva skrol trake u modernim preglednicima */
     
 }
 
-/* Osnovni stil za redove */
-.row {
-    display: flex;
-    align-items: center; /* Centriraj vertikalno */
-    justify-content: center; /* Centriraj horizontalno */
-  }
 
-.col-md-3 {
-    flex: 1; /* Sve kolone zauzimaju istu širinu */
-    display: flex; /* Omogućava centriranje sadržaja unutar kolona */
-    justify-content: center; /* Centriraj sadržaj horizontalno */
-    align-items: center; /* Centriraj sadržaj vertikalno */
-    text-align: center; /* Centriraj tekst unutar kolona */
+
+a {
+  text-decoration: none; /* Uklanja underline */
 }
 
-.col-md-4 {
-    flex: 1; /* Sve kolone zauzimaju istu širinu */
-    display: flex; /* Omogućava centriranje sadržaja unutar kolona */
-    justify-content: center; /* Centriraj sadržaj horizontalno */
-    align-items: center; /* Centriraj sadržaj vertikalno */
-    text-align: center; /* Centriraj tekst unutar kolona */
-}
-.col-md-5 {
-    flex: 1; /* Sve kolone zauzimaju istu širinu */
-    display: flex; /* Omogućava centriranje sadržaja unutar kolona */
-    justify-content: center; /* Centriraj sadržaj horizontalno */
-    align-items: center; /* Centriraj sadržaj vertikalno */
-    text-align: center; /* Centriraj tekst unutar kolona */
+a:hover, a:focus {
+  text-decoration: none; /* Osigurava da nema underline ni kod hovera */
 }
 
 /* Prilagođeni skrol za celo telo i sve kontejnerske elemente sa skrolovanjem */

@@ -1,0 +1,106 @@
+/* Kontejner za 404 stranicu */
+.error-page-wrapper {
+    height: 100vh; /* Puna visina ekrana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, var(--px-theme), var(--px-gradient-end));
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+  }
+  
+  /* Glavni kontejner */
+  .container {
+    max-width: 1200px;
+    padding: 0 20px;
+  }
+  
+  /* Red sa poravnanjem */
+  .notfound-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  /* Tekstovi */
+  .inner {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 50px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  
+  .display-3 {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #ff5555;
+    text-shadow: 0 4px 10px rgba(255, 85, 85, 0.8);
+    margin-bottom: 20px;
+  }
+  
+  .h4 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  /* Dugme za Povratak */
+  .btn-bar .px-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(to right, var(--px-theme), var(--px-gradient-end));
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-bar .px-btn:hover {
+    background: linear-gradient(to right, var(--px-gradient-end), var(--px-theme));
+    box-shadow: 0 8px 20px rgba(255, 85, 85, 0.4);
+    transform: translateY(-5px);
+  }
+  
+  /* Animacija Prikaza */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responzivne Prilagodbe */
+  @media (max-width: 768px) {
+    .display-3 {
+      font-size: 4rem;
+    }
+  
+    .h4 {
+      font-size: 1.5rem;
+    }
+  
+    .inner {
+      padding: 30px 20px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .display-3 {
+      font-size: 3rem;
+    }
+  
+    .h4 {
+      font-size: 1.2rem;
+    }
+  }
+  

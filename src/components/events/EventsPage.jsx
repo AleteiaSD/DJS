@@ -3,8 +3,6 @@ import Papa from "papaparse";
 import axios from "axios";
 
 import "../../assets/events/events.css";
-import HeaderComponent from "../headercomponent/HeaderComponent";
-import Footer from "../footer/FooterAnimation";
 
 const EventsPage = () => {
   const [events, setEvents] = useState([]);
@@ -41,11 +39,9 @@ const EventsPage = () => {
   if (error) return <div>{error}</div>;
 
   return (
-    <>
-    <HeaderComponent/>
 
     <div className="events-section">
-      <h2>Upcoming Events</h2>
+      <h1>Upcoming Events</h1>
       <div className="events-list">
         {events.map((event, index) => (
           <div key={index} className="event-item">
@@ -63,9 +59,6 @@ const EventsPage = () => {
         ))}
       </div>
     </div>
-    
-    <Footer/>
-    </>
   );
 };
 

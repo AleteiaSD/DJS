@@ -1,60 +1,285 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* Obezbeđuje da padding i margine ne utiču na širinu/visinu */
+/* Home Container */
+.home-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background: linear-gradient(to right, var(--px-theme), var(--px-gradient-end));
+}
+/* Scene Styles */
+.scene {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  z-index: 0;
+}
+.scene.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
 }
 
-/* Dodajemo osnovne stilove za celo telo i elemente koji sadrže sadržaj */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%; /* Podesi visinu tela da bude 100% */
-  width: 100%;
-  overflow-x: hidden; /* Isključujemo horizontalno skrolovanje */
+/* Background Images */
+.home-container .scene1 {
+  background-image: url("../../public/photos/home/kibo-bez-kontrole.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom left;
 }
-body {  
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  overflow-y: auto; /* Omogućavamo vertikalno skrolovanje */
+.home-container .scene2 {
+  background-image: url("../../public/photos/home/taki-bez-kontrole.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+.home-container .scene3 {
+  background-image: url("../../public/photos/home/homepagetransparent.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+/* Tekst Kontejner 1 */
+.text-container1{
+  position: absolute;   /* Potrebno za precizno pozicioniranje */
+  top: 0%;
+  left: 25%;           
+}
+/* Tekst Box Stilovi */
+.text-container1 .text-box1{
+  padding: 40px;
+  color: var(--px-bababa);
+  max-width: 50%;
+}
+.text-container1 .text-box1 h2{
+  font-size: 5rem;
+  margin-bottom: 10px;
+  text-decoration: none;
   
 }
-
-.background-container {
-  width: 100%;
-  height: 100vh; /* Postavi visinu kontejnera na 100% visine prozora */
-  position: relative; /* Obezbeđuje da unutrašnji elementi mogu biti pozicionirani u odnosu na ovaj kontejner */
-  overflow: hidden; /* Sakriva sve što izlazi izvan kontejnera */
-}
-.background-video {
-  position: absolute; /* Pozicionira video apsolutno u odnosu na kontejner */
-  top: 0; /* Početna pozicija videa */
-  left: 0; /* Početna pozicija videa */
-  width: 100%; /* Širina videa da bude 100% */
-  height: 100%; /* Visina videa da bude 100% */
-  object-fit: cover; /* Održava proporcije videa bez izobličenja */
-  z-index: 0; /* Osigurava da video bude pozadinski */
+.text-container1 .text-box1 p{
+  font-size: 1rem;
 }
 
-.background-image {
-  position: absolute; /* Pozicionira sliku apsolutno u odnosu na kontejner */
-  top: 0; /* Početna pozicija slike */
-  left: 0; /* Početna pozicija slike */
-  width: 100%; /* Širina slike da bude 100% */
-  height: 100%; /* Visina slike da bude 100% */
-  object-fit: cover; /* Održava proporcije slike bez izobličenja */
-  z-index: 0; /* Osigurava da slika bude pozadinska */
+
+/* Tekst Kontejner 2 */
+.text-container2{
+  position: absolute;   /* Potrebno za precizno pozicioniranje */
+  top: 0%;
+  left: 50%;           
+}
+/* Tekst Box Stilovi */
+.text-container2 .text-box2{
+  padding: 40px;
+  color: var(--px-bababa);
+  max-width: 50%;
+}
+.text-container2 .text-box2 h2{
+  font-size: 5rem;
+  margin-bottom: 10px;
+  text-decoration: none;
+  
+}
+.text-container2 .text-box2 p{
+  font-size: 1rem;
+  margin-left: 12%;
+  text-decoration: none;
 }
 
-.page-content {
-  position: relative; /* Obezbeđuje da sadržaj bude iznad slike */
-  padding: 20px; /* Dodaj padding za bolji izgled */
-  color: rebeccapurple;
-  z-index: 1; /* Osigurava da je sadržaj iznad slike */
+
+/* Tekst Kontejner 3 ovo pogledaj*/
+.text-container3{
+  position: absolute;  
+  width: 40%;
+  text-align: center;
+           
+}
+/* Tekst Box Stilovi */
+.text-container3 .text-box3{
+  padding: 40px;
+  color: var(--px-bababa);
+  max-width: 50%;
+}
+.text-container3 .text-box3 h4{
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-decoration: none;
+  
+}
+.text-container3 .text-box3 h2{
+  font-size: 1rem;
+  margin-left: 12%;
+  text-decoration: none;
 }
 
+
+
+
+
+
+
+
+/* Tekst Poravnanje */
+.left {
+  text-align: left;
+  padding-left: 50px;
+}
+.right {
+  text-align: right;
+  padding-right: 50px;
+}
+.center {
+  text-align: center;
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 1920px) {
+ 
+  .home-container .scene1{
+      margin-left: 20%;
+  }
+  .home-container .scene2{
+    margin-left: -20%;
+  }
+  
+}
+@media (max-width: 1200px) {
+  .text-box {
+    max-width: 380px;
+  }
+
+  .text-box h2 {
+    font-size: 4rem;
+  }
+
+  .text-box .description {
+    font-size: 2rem;
+  }
+
+  .left,
+  .right {
+    padding: 30px;
+  }
+}
+@media (max-width: 992px) {
+  .text-box {
+    max-width: 350px;
+  }
+
+  .text-box h2 {
+    font-size: 4rem;
+  }
+
+  .text-box .description {
+    font-size: 2rem;
+  }
+
+  .left,
+  .right {
+    padding: 20px;
+  }
+}
 @media (max-width: 768px) {
-  .row {
-    flex-direction: column; /* Prebaci u kolonu na manjim ekranima */
+  .text-box {
+    max-width: 320px;
+  }
+
+  .text-box h2 {
+    font-size: 3rem;
+  }
+
+  .text-box .description {
+    font-size: 1.5rem;
+  }
+
+  .left,
+  .right {
+    padding: 15px;
+  }
+}
+@media (max-width: 576px) {
+  .text-box {
+    max-width: 280px;
+  }
+
+  .text-box h2 {
+    font-size: 2rem;
+  }
+
+  .text-box .description {
+    font-size: 1rem;
+  }
+
+  .left,
+  .right {
+    padding: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .home-container .scene1{
+    margin-left: -10%;
+  }
+  .home-container .scene2{
+    margin-left: 14%;
+  }
+  .home-container .scene3{
+    margin-left: 0%;
+  }
+  .text-box {
+    max-width: 250px;
+    margin-top: 50%;
+  }
+
+  .text-box h2 {
+    font-size: 2rem;
+  }
+
+  .text-box .description {
+    font-size: 1rem;
+  }
+
+  .left,
+  .right {
+    padding: 5px;
+  }
+}
+@media (max-width: 375px) {
+  
+  .home-container .scene1{
+    margin-left: -200%;
+  }
+  .home-container .scene2{
+    margin-left: 0%;
+  }
+
+  .text-box {
+    max-width: 220px;
+  }
+
+  .text-box h2 {
+    font-size: 2rem;
+  }
+
+  .text-box .description {
+    font-size: 1rem;
+  }
+
+  .left,
+  .right {
+    padding: 0;
   }
 }

@@ -50,12 +50,12 @@ const HeaderComponent = () => {
 
   return (
     <>
-    <div class="container">      
-      <header>
-      <div className="row">
+    <div class="header-container">      
+      <header className="header">
+      <div className="header-row">
 
           {/* Leva strana sa društvenim linkovima */}
-          <div className="col-md-4">
+          <div className="header-col-md-4">
             <nav className="left-side">
               <ul className="social-links">
               {/* Prikaz broja telefona samo na desktop verziji */}
@@ -73,7 +73,7 @@ const HeaderComponent = () => {
                 ))}
               
               {/* Dugme za otvaranje menija na manjim ekranima */}
-              <div className="col-md-4 text-right d-md-none">
+              <div className="header-col-md-4 text-right d-md-none">
                 <FaBars onClick={toggleMenu} className="menu-icon" />
               </div>
 
@@ -83,7 +83,7 @@ const HeaderComponent = () => {
           </div>
 
           {/* Sredina sa logom */}
-          <div className="logo col-md-4 text-center">
+          <div className="logo header-col-md-4 text-center">
               <a id="logo" href="/">
                 <img 
                   alt="LogoDJs" 
@@ -94,7 +94,7 @@ const HeaderComponent = () => {
 
              
 
-          <div className="col-md-4">
+          <div className="header-col-md-4">
             <div className="hb-top-fixed d-flex">
 
               <div className="hb-lang">
@@ -125,8 +125,8 @@ const HeaderComponent = () => {
 
 
           {/* Donji deo sa navigacijom - prikaz na velikom ekranu*/}
-        <div className="row">
-          <div className="col-md-12 my-2 ">
+        <div className="header-row">
+          <div className="header-col-md-12 my-2 ">
             <nav className="nav-container">
               <ul className="nav-links">
               <li><a href="/">{t('header.home')}</a></li>

@@ -21,14 +21,14 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  padding-top: 20vh;
-  background-color: var(--px-bg-1);
+  background: linear-gradient(to right, var(--px-theme), var(--px-gradient-end));
+
 }
 
-h2 {
+h1 {
   text-align: center;
   margin-bottom: 30px;
-  color: var(--px-theme);
+  color: var(--px-black);
 }
 
 /* Stil za listu događaja */
@@ -57,7 +57,7 @@ h2 {
 }
 
 .event-image {
-  width: 150px;
+  width: 200px;
   height: 300px;
   object-fit: cover;
   border-radius: 10px;
@@ -90,12 +90,12 @@ h2 {
   .event-item {
     flex-direction: column; /* Prebaci događaj u vertikalni raspored */
     align-items: center; /* Centriraj sadržaj */
-    width: 90%; /* Smanji širinu za mobilne uređaje */
+    width: 70%; /* Smanji širinu za mobilne uređaje */
   }
 
   .event-image {
-    width: 120px; /* Smanji veličinu slike */
-    height: 120px;
+    width: 200px; /* Smanji veličinu slike */
+    height: 300px;
   }
 
   .event-details {
@@ -115,8 +115,8 @@ h2 {
   }
 
   .event-image {
-    width: 100px; /* Još manja slika */
-    height: 100px;
+    width: 200px; /* Još manja slika */
+    height: 300px;
   }
 
   .event-details h3 {

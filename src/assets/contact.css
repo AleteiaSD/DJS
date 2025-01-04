@@ -1,131 +1,190 @@
-/* Base Styles for Contact Section */
+
+/* General styling for Contact Section */
 .contact-section {
-    position: relative;
-    min-height: 100vh; /* Sekcija zauzima najmanje visinu ekrana */
-    display: flex;
-    align-items: center; /* Vertikalno poravnanje */
-    justify-content: center; /* Horizontalno poravnanje */
-    padding: 0 10%; /* Dodaj margine sa strane */
-    background-color: var(--px-bg-1);
-}
-
-
-/* Contact Information Styles */
-.contact-info {
-    margin-bottom: 20px;
-    color: var(--px-bababa);
-    text-align: center;
-}
-.contact-info h4 {
-    font-size: 34px;
-    font-weight: 500;
-}
-.contact-info p {
-    font-size: 16px;
-}
-.contact-info i,a {
-    text-decoration: none;
-    
-    text-align: left;
-    
-}
-.contact-info ul {
-    margin: 0;
-    padding: 10px 0 0;
-    list-style: none;
-}
-.contact-info li {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.3;
-    margin-top: 10px;
-}
-.contact-info li i {
-    width: 30px;
-    text-align: center;
-    font-size: 22px;
-    color: var(--px-theme);
-    margin-right: 10px;
-}
-
-/* Contact Form Styles */
-.contact-form {
-    background-color: var(--px-bg-1); /* Plava pozadina forme */
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px 30px;
-    text-align: center;
-    width: 100%;
-}
-
-
-.contact-form h4 {
-    margin-bottom: 20px;
-    color: var(--px-bababa);
-}
-.form-control{
-    color: rgb(214, 7, 7);
-}
-.contact-form .form-control {
-    background-color: var(--px-theme);
-    border: 2px solid var(--px-theme);
-    border-radius: 5px;
-    box-shadow: none;
-    font-size: 16px;
-    padding: 10px;
-    transition: all 0.3s ease-in-out;
-}
-/* Fokusirano polje */
-.contact-form .form-control:focus {
-    color: pink; /* Tekst kada korisnik piše */
-    background-color: rgba(255, 255, 255, 0.1); /* Lagana pozadina */
-    border-color: pink; /* Roz ivice kada je aktivno */
-    outline: none;
-    box-shadow: 0 0 5px pink;
-}
-
-.contact-form .form-control.invalid {
-    border-color: #dc3545 !important;
-}
-.contact-form textarea.form-control {
-    height: auto;
-}
-
-
-
-
-/* Button Styles */
-.btn-bar{
-    display: flex;
-    justify-content: center;  /* Centriranje horizontalno */
-}
-.btn-bar .px-btn {
-    background-color: var(--px-theme);
-    color: var(--px-bababa);
-    padding: 9px 34px;
-    border-radius: 60px;
-    transition: 0.3s;
-    text-align: center;
-    border-color: var(--px-theme, 0.75);
-    
-}
-.btn-bar .px-btn:hover {
-    transform: translateY(-5px);
+    display: flex; /* Postavlja elemente u red */
+    flex-wrap: wrap; /* Omogućava prelamanje u novi red */
+    justify-content: space-between; /* Razmak između elemenata */
+    align-items: flex-start; /* Poravnanje elemenata na vrhu */
+    padding: 100px 50px;
+    background: linear-gradient(to right, var(--px-theme), var(--px-gradient-end));
     color: #fff;
+    gap: 20px; /* Razmak između Contact Info i Contact Form */
+  }
+  
+  .contact-section h4 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 60px; /* Veći razmak ispod naslova */
+    color: #fff; /* Bele boje za naglasak */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+
+
+
+  /* Contact Info Styling */
+  .contact-info {
+    background: #333;
+    padding: 50px; /* Više prostora unutar info sekcije */
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); /* Blaga senka */
+    color: #fff; 
+    margin: 10px;
+    max-width: 30%;
+    max-height: 80vh;
+
+    flex: 1;
+  }  
+  .contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }  
+  .contact-info ul li {
+    margin-bottom: 10px; /* Razmak između informacija */
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+  }  
+  .contact-info ul li i {
+    font-size: 1.8rem;
+    margin-right: 15px;
+    color: var(--px-theme); /* Istaknuta boja ikonica */
+  }
+  .contact-info ul li span {
+    font-weight: bold;
+  }  
+  .contact-info h4 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--px-theme); /* Kontrastna boja naslova */
+  }
+  /*Contact form*/
+  .contact-form {
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    max-width: 60%; /* Forma centrirana i ograničena po širini */
+    margin: auto; /* Centriranje forme */
+    flex:2;
+
+    
+  }
+  .contact-form h4 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+  }
+  .contact-form:hover {
+    transform: translateY(-10px); /* Blagi "hover" efekat */
+  }
+  .contact-form .form-group {
+    text-align: center;
+    margin-bottom: 20px;
+}
+  .contact-form input, .contact-form textarea {
+  width: 100%;
+  padding-left: 15px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease-in-out;
+  }
+  .contact-form input:focus, .contact-form textarea:focus {
+  border-color: var(--px-theme);
+  outline: none;
+  }
+  .contact-form .form-control {
+    text-align: left;
+    width: 80%;
+    padding: 15px 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+  }
+  .contact-form .form-control:focus {
+    border-color: var(--px-theme); /* Elegantna boja fokusa */
+    box-shadow: 0px 0px 8px rgba(106, 17, 203, 0.6);
+    outline: none;
+  }
+  .contact-form .invalid-feedback {
+    display: block;
+    font-size: 0.85rem;
+    color: #e74c3c;
+    margin-top: 5px;
+  }
+  .contact-form .btn-bar {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .contact-form .px-btn {
+    background: linear-gradient(to right, var(--px-theme), var(--px-gradient-end));
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+
+    height: 60px;
+  }
+  .contact-form .px-btn:hover {
+    background: linear-gradient(to right, var(--px-gradient-end), var(--px-theme));
+    box-shadow: 0px 8px 20px rgba(106, 17, 203, 0.4);
+  }
+  
+  
+
+
+
+
+  @media (max-width: 1127px) {
+    .contact-section {
+        flex-direction: column; /* Vertikalni raspored na manjim ekranima */
+        padding: 60px 20px;
+    }
+
+    .contact-info, 
+    .contact-form {
+        max-width: 80%; /* Puna širina za obe sekcije */
+        margin: 0 auto; /* Centriranje na manjim ekranima */
+    }
 }
 
-
-
-
-
-
-
-/* Responsive Adjustments */
-@media screen and (max-width: 767px) {
-    .contact-info, .contact-form {
-        margin-bottom: 20px;
+@media (max-width: 768px) {
+    .contact-form, .contact-info {
+        padding: 40px;
+        max-width: 80%; /* Puna širina */
     }
-    .contact-info h4, .contact-form h4 {
-        font-size: 28px;
+
+    .contact-section h4 {
+        font-size: 1.8rem;
     }
 }
+
+@media (max-width: 480px) {
+    .contact-form, .contact-info {
+        padding: 30px;
+        max-width: 80%; /* Puna širina na malim ekranima */
+    }
+
+    .contact-section h4 {
+        font-size: 1.6rem;
+    }
+}
+
+  
+

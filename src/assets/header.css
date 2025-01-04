@@ -1,47 +1,50 @@
-/* src/assets/header.css */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* Obezbeđuje da padding i margine ne utiču na širinu/visinu */
-}
-/* Dodajemo osnovne stilove za celo telo i elemente koji sadrže sadržaj */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%; /* Podesi visinu tela da bude 100% */
-  width: 100%;
-  overflow-x: hidden; /* Isključujemo horizontalno skrolovanje */
-}
-body {  
+/* Osnovni stil za redove */
+.header-row {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  overflow-y: auto; /* Omogućavamo vertikalno skrolovanje */
-  
-  color: black;
+  align-items: center; /* Centriraj vertikalno */
+  justify-content: center; /* Centriraj horizontalno */
+}
+.header-col-md-3 {
+  flex: 1; /* Sve kolone zauzimaju istu širinu */
+  display: flex; /* Omogućava centriranje sadržaja unutar kolona */
+  justify-content: center; /* Centriraj sadržaj horizontalno */
+  align-items: center; /* Centriraj sadržaj vertikalno */
+  text-align: center; /* Centriraj tekst unutar kolona */
+}
+.header-col-md-4 {
+  flex: 1; /* Sve kolone zauzimaju istu širinu */
+  display: flex; /* Omogućava centriranje sadržaja unutar kolona */
+  justify-content: center; /* Centriraj sadržaj horizontalno */
+  align-items: center; /* Centriraj sadržaj vertikalno */
+  text-align: center; /* Centriraj tekst unutar kolona */
+}
+.header-col-md-5 {
+  flex: 1; /* Sve kolone zauzimaju istu širinu */
+  display: flex; /* Omogućava centriranje sadržaja unutar kolona */
+  justify-content: center; /* Centriraj sadržaj horizontalno */
+  align-items: center; /* Centriraj sadržaj vertikalno */
+  text-align: center; /* Centriraj tekst unutar kolona */
 }
 
-.container{
-  position: relative; /* Obezbeđuje da video bude ispod ostalih elemenata */
+.header-container {
   width: 100%;
-  height: auto;
- /* background-image: url("../../public/photos/background/homepagetransparent.png");*/ 
+  height: 17vh;
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat; /* Spreči ponavljanje slike */
+  
+  background: linear-gradient(to right, var(--px-theme), var(--px-gradient-end));
+ 
   padding-top: 0;
   text-transform: uppercase; /* Tekst u tim kolonama je uppercase */
   font-weight:bolder;
+  top: 0; /* Pozicionira header na vrh stranice */
+  left: 0; /* Pozicionira header na levo */
   
 }
 header {
-  position: fixed; /* Obezbeđuje da se header prikazuje iznad slike i ostane na vrhu prilikom skrolovanja */
-  top: 0; /* Pozicionira header na vrh stranice */
-  left: 0; /* Pozicionira header na levo */
-  width: 100%; /* Širina header-a da bude 100% */
-  z-index: 1; /* Osigurava da je header iznad pozadinskog sadržaja */
-  padding: 20px 0; /* Dodaj padding da se sadržaj ne lepi uz ivice */
-  background-color: var(--px-transparent); /* Transparentna pozadina */
+  
+  padding: 10px 20px; /* Dodaj padding da se sadržaj ne lepi uz ivice */
+
 }
 
 
@@ -280,19 +283,18 @@ nav ul li a:hover{
   font-size: 24px;
   cursor: pointer;
   color: var(--px-bababa);
-  position: absolute; /* Pozicioniraj apsolutno unutar header-a */
+  position: fixed; /* Pozicioniraj apsolutno unutar header-a */
   right: 5%; /* Odmak od desne ivice */
-  top: 17.5%; /* Vertikalno centriranje */
 }
 
 
 
 @media (max-width: 768px) {
-  .row {
+  .header-row {
     flex-direction: column;
   }
 
-  .col-md-4 {
+  .header-col-md-4 {
     width: 100%;
   }
 
@@ -337,14 +339,23 @@ nav ul li a:hover{
     display: flex;
   }
 }
-
+@media (max-width: 1138px) {
+  .header-container {
+    height: 21vh;
+  }
+}
 @media (max-width: 1127px) {
+  .header-container {
+    width: 100%;
+    height: 17vh;
+  }
   .contact-tel-header {
     display: none;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   /* Prikazuje samo na većim ekranima */
+  
   .side-menu {
     display: none;
   }
@@ -360,6 +371,32 @@ nav ul li a:hover{
 }
 
 @media (max-width: 480px) {
+  .header-container {
+    height: 20vh;
+  }
+  header {
+    padding: 10px 0;
+  }
+
+  .nav-links li {
+    margin: 5px 0;
+  }
+
+  .hb-lang a {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+
+  .social-links a {
+    font-size: 16px;
+    margin: 0 2px;
+  }
+}
+
+@media(max-width: 375px){
+  .header-container {
+    height: 25vh;
+  }
   header {
     padding: 10px 0;
   }

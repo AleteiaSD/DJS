@@ -4,13 +4,24 @@
     position: fixed;
     bottom: 20px;
     left: 20px;
-    z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.8);; /* Zelena pozadina */
-    border-radius: 50%;
-    padding: 10px;
+    z-index: 10;
+    background: linear-gradient(to right, var(--px-theme), var(--px-gradient-end));
+    width: 40px; /* Dodato za savršeni krug */
+    height: 40px; /* Ista visina kao širina */
+    border-radius: 50%; /* Krug */
+    padding: 10px; /* Unutrašnji razmak */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    animation: pulse 1.5s infinite; /* Dodaj animaciju pulsiranja */
-    cursor: pointer; /* Promeni pokazivač miša na ikoni */
+    animation: pulse 1.5s infinite; /* Animacija pulsiranja */
+    cursor: pointer; /* Promena pokazivača miša */
+    display: flex;
+    justify-content: center; /* Centriraj ikonicu horizontalno */
+    align-items: center; /* Centriraj ikonicu vertikalno */
+    line-height: normal;
+
+    /* Uklanja kockasti efekat na klik */
+    outline: none;
+    -webkit-tap-highlight-color: transparent; /* Android & iOS efekat */
+    touch-action: manipulation; /* Sprečava neželjene interakcije */
 }
 
 .floating-phone-icon a {

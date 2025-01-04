@@ -4,7 +4,6 @@ import "../../assets/aboutus/aboutus.css";
 import "../../assets/aboutus/serviceanimation.css";
 import { ServiceContent } from "../GlobalInfo";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Footer from "../footer/FooterAnimation";
 import AOS from 'aos'; // Importuj AOS
 import 'aos/dist/aos.css'; // Importuj AOS stilove
 
@@ -37,8 +36,8 @@ export default function Services() {
               </div>
             </div>
           ))}
-        <Footer/>
       </div>
+      
     </>
   );
 }

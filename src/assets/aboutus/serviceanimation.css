@@ -7,7 +7,6 @@
   border-radius: 10px;
   overflow: hidden;
   position: relative;
-  z-index: -1;
   height: 35vh;
   width: 70%;
   display: block; /* Postavi da bude blok element */
@@ -27,7 +26,6 @@
     width: 200px;
     height: 200px;
     border-radius: 0;
-    z-index: -1;
     background: var(--px-dark); /* Umesto $px-dark */
     transition: 0.5s ease-in-out;
   }
@@ -40,7 +38,6 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    z-index: -2;
     background: var(--px-theme); /* Umesto $px-theme */
     transition: 0.5s ease-in-out;
   }
