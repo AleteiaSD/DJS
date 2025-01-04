@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../../assets/home.css";
 import "../../assets/header.css";
-
+import TextLoop from "react-text-loop";
 import { useTranslation } from 'react-i18next';
 
 const Home = () => {
@@ -11,9 +11,20 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentScene((prevScene) => (prevScene + 1) % 3);
-    }, 10000);
+    }, 1000000);
     return () => clearInterval(interval);
   }, []);
+
+  const sliderContent = {
+    description: t('slider.descriptionTaki'),
+    roles: [
+      t('slider.text1Taki'),
+      t('slider.text2Taki'),
+      t('slider.text3Taki'),      
+      t('slider.text4Taki'),
+    ],
+    btnText: t('slider.btnTextTaki'),
+  };
 
   return (
     <div className="home-container">
@@ -28,33 +39,38 @@ const Home = () => {
             <p className="description">{t('slider.text3Kibo')}</p>
             <p className="description">{t('slider.text4Kibo')}</p>
             <p className="description">{t('slider.text5Kibo')}</p>
-               
           </div>
         </div>
       </div>
 
       {/* Scene 2 */}
-      <div className={`scene scene2 ${currentScene === 2 ? "active" : ""}`}>
-        <div className="text-container2">
-          <div className="text-box2">
-            <h1>{t('slider.helloTaki')}</h1>
-            <h2>{t('slider.nameTaki')}</h2>
-            <p className="description">{t('slider.text1Taki')}</p>
-            <p className="description">{t('slider.text2Taki')}</p>
-            <p className="description">{t('slider.text3Taki')}</p>
-            <p className="description">{t('slider.text4Taki')}</p>
-            <p className="description">{t('slider.text5Taki')}</p>
-            
+      <div className={`scene scene2 ${currentScene === 0 ? "active" : ""}`}>
+        <div className="home-banner">
+          <div className="text-container2">
+            <div className="row full-screen align-items-center">
+              <div className="col-lg-7">
+                <div className="text-box2">
+                  <h6>{t('slider.helloTaki')}</h6>
+                  <h1 className="font-alt">{t('slider.nameTaki')}</h1>
+                  <TextLoop>
+                    {sliderContent.roles.map((role, index) => (
+                      <p className="loop-text lead" key={index}>{role}</p>
+                    ))}
+                  </TextLoop>
+                  <p className="desc">{sliderContent.description}</p>
+                  </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Scene 3 */}
-      <div className={`scene scene3 ${currentScene === 0 ? "active" : ""}`}>
+      <div className={`scene scene3 ${currentScene === 2 ? "active" : ""}`}>
         <div className="text-container3">
           <div className="text-box3">
             <h4>{t('slider.hello')}</h4>
-            <h2 >{t('slider.name')}</h2>
+            <h2>{t('slider.name')}</h2>
           </div>
         </div>
       </div>
