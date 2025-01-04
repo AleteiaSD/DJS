@@ -1,51 +1,129 @@
-/* FloatingPhoneIcon.css */
+/* Glavni kontejner za dugme i meni */
+.floating-phone-container {
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  z-index: 10;
+  display: flex; /* Dodaj flexbox za horizontalno poravnanje */
+  flex-direction: row; /* Poravnanje elemenata u redu */
+  align-items: center; /* Poravnanje svih elemenata vertikalno u centru */
+}
 
+/* Glavno dugme - tri tačke ili X */
 .floating-phone-icon {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 10;
-    background: linear-gradient(to right, var(--px-theme), var(--px-gradient-end));
-    width: 40px; /* Dodato za savršeni krug */
-    height: 40px; /* Ista visina kao širina */
-    border-radius: 50%; /* Krug */
-    padding: 10px; /* Unutrašnji razmak */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    animation: pulse 1.5s infinite; /* Animacija pulsiranja */
-    cursor: pointer; /* Promena pokazivača miša */
-    display: flex;
-    justify-content: center; /* Centriraj ikonicu horizontalno */
-    align-items: center; /* Centriraj ikonicu vertikalno */
-    line-height: normal;
-
-    /* Uklanja kockasti efekat na klik */
-    outline: none;
-    -webkit-tap-highlight-color: transparent; /* Android & iOS efekat */
-    touch-action: manipulation; /* Sprečava neželjene interakcije */
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(to right, var(--px-theme), var(--px-gradient-end));
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, background 0.3s ease-in-out;
+  margin-right: 10px; /* Razmak između dugmeta i prvog elementa menija */
 }
 
-.floating-phone-icon a {
-    color: var(--px-phone-color) ; /* Boja ikone telefona */
+.floating-phone-icon:hover {
+  transform: scale(1.1);
+  background: linear-gradient(to right, var(--px-gradient-end), var(--px-theme));
 }
 
-/* Definisanje animacije */
+/* Ikonica - tri tačke */
+.icon-dots {
+  font-size: 28px;
+  color: white;
+}
+
+/* Ikonica - "X" za zatvaranje */
+.icon-close {
+  font-size: 28px;
+  color: white;
+}
+
+/* Popup meni */
+.floating-phone-menu {
+  display: flex;
+  flex-direction: row; /* Ikonice raspoređene horizontalno */
+  align-items: center; /* Poravnanje svih elemenata vertikalno */
+  background: transparent;
+  padding: 0;
+  position: relative;
+  opacity: 0;
+  transform: scaleX(0); /* Početno sakriveno */
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.floating-phone-menu.open {
+  opacity: 1;
+  transform: scaleX(1); /* Širi se horizontalno */
+}
+
+/* Ikonice u popup meniju */
+.social-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px; /* Horizontalni razmak između ikonica */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background: linear-gradient(to right, var(--px-gradient-end), var(--px-theme));
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  background: linear-gradient(to right, var(--px-theme), var(--px-gradient-end));
+  color: white;
+}
+
+/* Pojedinačne stilizacije */
+.facebook {
+  background: #4267B2; /* Facebook plava */
+}
+
+.instagram {
+  background: #E1306C; /* Instagram roze */
+}
+
+.tiktok {
+  background: #69C9D0; /* TikTok plavo-zelena */
+}
+
+.phone {
+  background: #34C759; /* Zelena za telefon */
+}
+
+
+/* Pulsirajući efekat za tri tačke */
 @keyframes pulse {
-    0% {
-        transform: scale(1); /* Početna veličina */
-        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);;
-    }
-    50% {
-        transform: scale(1.2); /* Veća veličina u sredini animacije */
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);;
-    }
-    100% {
-        transform: scale(1); /* Vraća se na početnu veličinu */
-        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);;
-    }
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
 }
 
+/* Glavno dugme sa tri tačke sa pulsirajućim efektom */
+.floating-phone-icon.pulsating {
+  animation: pulse 1.5s infinite; /* Primeni animaciju pulsiranja */
+}
+
+/* Responzivnost - sakrij na velikim ekranima */
 @media (min-width: 1128px) {
-    .floating-phone-icon {
-        display: none; /* Sakrij ikonu na većim ekranima */
-    }
+  .floating-phone-container {
+    display: none;
+  }
 }

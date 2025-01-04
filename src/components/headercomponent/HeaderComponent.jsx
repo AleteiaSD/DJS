@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
 import "../../assets/header.css";
-import { conctInfo,SocialShare } from "../GlobalInfo"; 
+import { SocialShare } from "../GlobalInfo"; 
 import { FaBars  } from "react-icons/fa";
 
 
@@ -58,12 +58,6 @@ const HeaderComponent = () => {
           <div className="header-col-md-4">
             <nav className="left-side">
               <ul className="social-links">
-              {/* Prikaz broja telefona samo na desktop verziji */}
-              {!isMobile && (
-                <li className="contact-tel-header">
-                  <a href="tel:+381629612186">{conctInfo.phone}</a>
-                </li>
-              )}
                 {SocialShare.map((val, i) => (
                   <li key={i} className="d-inline-block mx-2">
                   <a key={i} href={`${val.link}`} rel="noreferrer" target="_blank">

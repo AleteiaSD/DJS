@@ -1,4 +1,4 @@
-import { FaFacebookF, FaInstagram, FaTiktok  } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTiktok , FaPhone } from "react-icons/fa";
 import { FaCompactDisc } from "react-icons/fa";
 import { GiMusicSpell,GiMusicalNotes,GiTechnoHeart,GiGuitarBassHead   } from "react-icons/gi";
 import { SiYoutubemusic,SiMusicbrainz } from "react-icons/si";
@@ -14,8 +14,10 @@ export const SocialShare = [
     { Social: <FaFacebookF />, link: "https://www.facebook.com/people/Djs-Taki-Kibo/100063518410015/" },
     { Social: <FaInstagram />, link: "https://www.instagram.com/djs_taki_kibo/" },
     { Social: <FaTiktok />, link: "https://www.tiktok.com/@djs_taki_kibo" },
+    { Social: <FaPhone />, link: 'tel:$(conctInfo.phone)' },
   ];
   
+
 export const ServiceContent = [
   {
     icon: <GiMusicSpell />,
