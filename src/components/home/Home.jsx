@@ -16,7 +16,7 @@ const Home = () => {
   }, []);
 
   const sliderContent = {
-    description: t('slider.descriptionTaki'),
+    description: t('slider.text5Taki'),
     roles: [
       t('slider.text1Taki'),
       t('slider.text2Taki'),
