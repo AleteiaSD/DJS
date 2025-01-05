@@ -1,7 +1,7 @@
 /* Home Container */
 .home-container {
   position: relative;
-  height: 80vh;
+  height: 100vh;
   overflow: hidden;
   background-size: cover;
   background-position: center;
@@ -34,7 +34,7 @@
   background-image: url("../../public/photos/home/kibo-bez-kontrole.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: bottom left;
+  background-position: bottom left 32%;
 }
 .home-container .scene2 {
   background-image: url("../../public/photos/home/taki-bez-kontrole.png");
@@ -50,6 +50,45 @@
   background-position: center;
 }
 
+/* Text Container 1 */
+.text-container1 {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translate(0, -50%);
+  width: 40%;
+  color: white;
+  text-align: left;
+}
+
+.text-container1 .text-box1 h1 {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.text-container1 .text-box1 h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.text-container1 .loop-text {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--px-bababa);
+}
+
+.text-container1 .desc {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-top: -10px;
+  color: var(--px-bababa);
+}
+
+
+
+
+
 /* Text Container 2 */
 .text-container2 {
   position: fixed;
@@ -61,9 +100,6 @@
   text-align: left;
   scale: 1.3;
 }
-
-
-
 /* Type Box Styles */
 .text-container2 .text-box2 {
   color: var(--px-bababa);
@@ -105,10 +141,73 @@
 
 
 
+/* Text Container 3 */
+
+.home-container .scene3 {
+  background-image: url("../../public/photos/home/homepagetransparent.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.text-container3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.text-container3 .text-box3 h4 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.text-container3 .text-box3 h2 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.text-container3 .loop-text {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--px-bababa);
+}
+
+.text-container3 .desc {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-top: -10px;
+  color: var(--px-bababa);
+}
+
+
+
 /* Responsive Adjustments */
 
 /* Tablet */
 @media (max-width: 1024px) {
+  /*Scene 1*/
+  .text-container1 {
+    width: 50%;
+  }
+
+  .text-container1 .text-box1 h1 {
+    font-size: 50px;
+  }
+
+  .text-container1 .text-box1 h2{
+    font-size: 36px;
+  }
+
+  .text-container1 .loop-text {
+    font-size: 20px;
+  }
+
+  /*Scene 2*/
   .text-container2 {
     top: 45%;
     left: 45%;
@@ -138,10 +237,47 @@
   .home-container .scene2 {
      background-position: bottom right calc(100% - 90%);;
   }
+
+  /*Scene 3*/
+  .text-container3 {
+    width: 50%;
+  }
+
+  .text-container3 .text-box3 h4 {
+    font-size: 50px;
+  }
+
+  .text-container3 .text-box3 h2 {
+    font-size: 36px;
+  }
+
+  .text-container3 .loop-text {
+    font-size: 20px;
+  }
+
 }
 
 /* Mobilni */
 @media (max-width: 768px) {
+  /*Scene 1*/
+  .text-container1 {
+    width: 60%;
+  }
+
+  .text-container1 .text-box1 h1 {
+    font-size: 40px;
+  }
+
+  .text-container1 .text-box1 h2{
+    font-size: 28px;
+  }
+
+  .text-container1 .loop-text {
+    font-size: 18px;
+  }
+
+
+  /*Scene 2*/
   .text-container2 {
     top:38%;
     left: 35%;
@@ -170,14 +306,34 @@
   .home-container .scene2 {
      background-position: bottom right;
   }
+
+
+
+  /*Scene 3*/
+  .text-container3 {
+    width: 60%;
+  }
+
+  .text-container3 .text-box3 h4 {
+    font-size: 40px;
+  }
+
+  .text-container3 .text-box3 h2 {
+    font-size: 28px;
+  }
+
+  .text-container3 .loop-text {
+    font-size: 18px;
+  }
+
 }
 
 /* Manji mobilni uređaji */
 @media (max-width: 576px) {
   .text-container2 {
-    top:35%;
+    top:42%;
     left: 25%;
-    scale: 1.1;
+    scale: 1;
   
   }
   .text-container2 .text-box2{
@@ -201,6 +357,25 @@
     margin-top: 0;
   }
   .home-container .scene2 {
-    background-position: bottom right calc(100% - 100px);;
+    background-position: bottom right calc(100% - 220%);
   }
 }
+
+/* Dodatna prilagodba za pejzažnu orijentaciju (horizontalna) */
+@media (orientation: landscape) and (max-width: 1024px){
+  .text-container2 {
+    top: 42%;
+    left: 40%;
+    scale: 1; /* Blago smanjena skala za horizontalnu orijentaciju */
+  }
+  .text-container2 .text-box2 h1 {
+    font-size: 70px; /* Prilagodba veličine naslova */
+  }
+  .text-container2 .text-box2 .loop-text {
+    font-size: 22px;
+  }
+  .home-container .scene2 {
+    background-position: bottom right calc(100% - 70%); /* Poravnanje slike u pejzažu */
+  }
+}
+

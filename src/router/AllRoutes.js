@@ -19,7 +19,6 @@ const AllRoutes = () => {
       <ScrollTopBehaviour />
       
       <HeaderComponent/>
-      <FloatingPhoneIcon/>
 
       <Routes>
         <Route path="/" element={<Home/>} />
@@ -32,6 +31,7 @@ const AllRoutes = () => {
       </Routes>
       <Footer/>
      
+      <FloatingPhoneIcon/>
       
     </>
   );

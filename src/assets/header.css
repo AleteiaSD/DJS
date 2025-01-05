@@ -28,24 +28,17 @@
 
 .header-container {
   width: 100%;
-  height: 17vh;
   background-position: center;
   background-size: cover;
   
-  background: linear-gradient(to right, var(--px-theme), var(--px-gradient-end));
+  background: var(--px-black);
  
   padding-top: 0;
   text-transform: uppercase; /* Tekst u tim kolonama je uppercase */
   font-weight:bolder;
-  top: 0; /* Pozicionira header na vrh stranice */
-  left: 0; /* Pozicionira header na levo */
   
 }
-header {
-  
-  padding: 10px 20px; /* Dodaj padding da se sadržaj ne lepi uz ivice */
 
-}
 
 
 
@@ -339,20 +332,8 @@ nav ul li a:hover{
     display: flex;
   }
 }
-@media (max-width: 1138px) {
-  .header-container {
-    height: 21vh;
-  }
-}
-@media (max-width: 1127px) {
-  .header-container {
-    width: 100%;
-    height: 17vh;
-  }
-  .contact-tel-header {
-    display: none;
-  }
-}
+
+
 @media (min-width: 769px) {
   /* Prikazuje samo na većim ekranima */
   
@@ -370,10 +351,8 @@ nav ul li a:hover{
   }
 }
 
-@media (max-width: 480px) {
-  .header-container {
-    height: 20vh;
-  }
+@media (max-width: 576px) {
+  
   header {
     padding: 10px 0;
   }
@@ -394,9 +373,7 @@ nav ul li a:hover{
 }
 
 @media(max-width: 375px){
-  .header-container {
-    height: 25vh;
-  }
+  
   header {
     padding: 10px 0;
   }
@@ -415,3 +392,29 @@ nav ul li a:hover{
     margin: 0 2px;
   }
 }
+
+
+/* Prilagodba za pejzažnu orijentaciju (horizontalna) */
+@media (orientation: landscape) {
+
+  .nav-links li {
+    margin: 5px 10px; /* Manji razmak između stavki menija */
+  }
+
+  .social-links a {
+    font-size: 16px; /* Smanji veličinu ikonica */
+    margin: 0 5px; /* Dodaj razmak između ikonica */
+  }
+
+  .logo img {
+    max-width: 80%; /* Prilagodi veličinu logotipa */
+  }
+
+  .menu-icon {
+    font-size: 20px; /* Smanji veličinu menija */
+  }
+  .hb-lang{
+    scale: 0.85;
+  }
+}
+

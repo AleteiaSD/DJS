@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaFacebookF, FaInstagram, FaTiktok, FaPhone, FaTimes, FaEllipsisH } from "react-icons/fa";
+import { FaTimes, FaEllipsisH } from "react-icons/fa";
 import "../../assets/floatingphoneicon.css";
 import { SocialShare } from "../GlobalInfo";
 

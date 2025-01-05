@@ -1,6 +1,5 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { SocialShare } from "../GlobalInfo";
 import "../../assets/footer.css";
 
 const Footer = () => {
