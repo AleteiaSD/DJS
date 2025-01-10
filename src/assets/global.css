@@ -4,8 +4,29 @@
 
 /* Osnovne boje */
 :root {
-    --px-font: "Roboto", sans-serif; /* Postavljanje Arial kao osnovnog fonta */
+    --px-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Postavljanje Arial kao osnovnog fonta */
     --px-font-alt: "Roboto", serif;
+
+    --px-logo: #8b8b8b;
+
+    --px-navbar: #1F1F21;
+    --px-navbar-white: #fff;
+    --px-navbar-hover: #333;
+    --px-navbar-lang-sw:  #343a40;
+    --px-navbar-lang-sw-cicle: #1F1F21;
+    --px-navbar-lang-sw-change: #2C2C2F;
+    --px-navbar-side-menu: #1F1F21;
+    --px-navbar-menu-toggle: #8b8b8b;
+
+    
+
+
+    --px-home-text-gradient: linear-gradient(to right, rgba(186, 186, 186, 0.8), rgba(0, 0, 0, 0.8));
+ 
+    --px-home-gradient-1: #fff;
+
+    --px-home-gradient-2: #c4c4c4;
+   
 
     --px-transparent: var(--px-transparent);
     --px-theme: #6a11cb;
@@ -13,6 +34,7 @@
     --px-bababa: #bababa;
     --px-dark: #1c1c1c;
     --px-white: #fff;
+
     --px-black: #000;
     --px-bg-1: #1c1c1c;
     --px-bg-2: #2e2e2e;

@@ -7,25 +7,20 @@
 
 .navbar {
     padding: 0.5rem 1rem;
-    background: #1F1F21;
+    background: var(--px-navbar);
     display: flex;
     justify-content: space-between;
     align-items: center; /* Centriranje sadržaja vertikalno */
 }
-.navbar-brand-container {
-    display: flex;
-    justify-content: flex-start;
-    gap: 20px;
-}
 
 .logotandk {
     width: 300px;
-    height: 150px;
-    fill: #fff;
+    height: 110px;
+    fill: var(--px-logo);
 }
 
 .logotandk:hover {
-    fill: #E7E7E7;
+    fill: var(--px-navbar-hover);
     
 }
 
@@ -37,12 +32,13 @@
     justify-content: center;
     /* Centriranje elemenata unutar navigacije */
     gap: 23px;
-    /* Razmak između stavki */
+
 }
 
 .nav-links li {
     display: flex;
     align-items: center;
+    
 }
 
 .nav-links li a {
@@ -54,11 +50,13 @@
     font-style: normal;
     text-transform: uppercase;
     text-decoration: none;
-    color: #fff;
+    color: var(--px-navbar-white);
+    font-size: 22px;
+    font-family: var(--px-font);
 }
 
 .nav-links li a:hover {
-    color: #E7E7E7;
+    color: var(--px-navbar-hover);
     /* Promena boje pri hover-u */
 }
 
@@ -107,7 +105,7 @@ label {
     width: 100px;
     height: 50px;
     border-radius: 999px;
-    background: #343a40;
+    background: var(--px-navbar-lang-sw);
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.05) inset;
     cursor: pointer;
     position: relative;
@@ -117,7 +115,7 @@ label {
     width: 45px;
     height: 45px;
     border-radius: 99px;
-    background: #1F1F21;
+    background: var(--px-navbar-lang-sw-cicle);
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05),
         -10px -10px 30px rgba(0, 0, 0, 0.05) inset;
     position: absolute;
@@ -153,7 +151,7 @@ label {
 
 /* Input checked aktivira promenu */
 input[type=checkbox]:checked+.display label {
-    background: #1F1F21;
+    background: var(--px-navbar-lang-sw-cicle);
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5) inset;
 }
 
@@ -161,7 +159,7 @@ input[type=checkbox]:checked+.display label {
 input[type=checkbox]:checked+.display label .circle {
     left: 100%;
     transform: translate(-110%, -50%);
-    background: #2C2C2F;
+    background: var(--px-navbar-lang-sw-change);
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5),
         -10px -10px 30px rgba(0, 0, 0, 0.5) inset;
 }
@@ -193,7 +191,7 @@ label:active .circle {
     right: 0;
     width: 40%;
     height: 100%;
-    background-color: #1F1F21;
+    background-color: var(--px-navbar-side-menu);
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     z-index: 100;
     /* Osiguraj da bude iznad ostalog sadržaja */
@@ -211,34 +209,20 @@ label:active .circle {
 .side-menu.menu-close {
     transform: translateX(100%);
 }
-
-
 .menu-content {
     display: flex;
     flex-direction: column;
 }
-
-.nav-links {
-    list-style-type: none;
-    padding: 0;
-}
-
-.nav-links li {
-    margin-bottom: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-}
-
 .menu-toggle {
     cursor: pointer;
-    color: #333;
+    color: var(--px-navbar-menu-toggle);
     position: absolute;
     display: none; /* Prikazivaćemo je samo na manjim ekranima */
 }
+.menu-toggle :hover{
+    color: var(--px-navbar-hover);
+}
+
 
 /*==========================================================*/
 /*======================RESPONZIVNOST=======================*/

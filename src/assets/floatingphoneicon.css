@@ -13,7 +13,7 @@
 .floating-phone-icon {
   width: 50px;
   height: 50px;
-  background: linear-gradient(to right, var(--px-theme), var(--px-gradient-end));
+  background: linear-gradient(to right, black, rgb(77, 77, 77), rgb(119, 119, 119));
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -26,7 +26,7 @@
 
 .floating-phone-icon:hover {
   transform: scale(1.1);
-  background: linear-gradient(to right, var(--px-gradient-end), var(--px-theme));
+  background: linear-gradient(to right,  rgb(119, 119, 119), rgb(77, 77, 77),black);
 }
 
 /* Ikonica - tri tačke */
@@ -70,7 +70,7 @@
   justify-content: center;
   align-items: center;
   font-size: 24px;
-  background: linear-gradient(to right, var(--px-gradient-end), var(--px-theme));
+  background: linear-gradient(to right,  rgb(119, 119, 119), rgb(77, 77, 77),black);
   color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
@@ -78,7 +78,7 @@
 
 .social-icon:hover {
   transform: scale(1.2);
-  background: linear-gradient(to right, var(--px-theme), var(--px-gradient-end));
+  background: linear-gradient(to right, black, rgb(77, 77, 77), rgb(119, 119, 119));;
   color: white;
 }
 

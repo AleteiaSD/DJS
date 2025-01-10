@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaTimes, FaEllipsisH } from "react-icons/fa";
+import { FaTimes, FaComment, } from "react-icons/fa";
 import "../../assets/floatingphoneicon.css";
 import { SocialShare } from "../GlobalInfo";
 
@@ -20,7 +20,7 @@ const FloatingPhoneIcon = () => {
         {isOpen ? (
           <FaTimes className="icon-close" />
         ) : (
-          <FaEllipsisH className="icon-dots" />
+          <FaComment className="icon-dots" />
         )}
       </div>
 

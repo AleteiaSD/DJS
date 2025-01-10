@@ -3,13 +3,18 @@
   position: relative;
   height: 100vh;
   overflow: hidden;
-  background: 
-  url("../../public/photos/home/takikibo.png"), /* Slika */
-    linear-gradient(to right, rgba(186, 186, 186, 0.8), rgba(0, 0, 0, 0.8)); /* Gradient */
-   
-  background-size: cover; /* Slika pokriva celu pozadinu */
-  background-position: center; /* Centriraj sliku */
-  background-repeat: no-repeat; /* Onemogući ponavljanje slike */
+  background:
+    url("../../public/photos/home/takikibosmoke.png"),
+    /* Slika */
+    linear-gradient(to right, rgba(186, 186, 186, 0.8), rgba(0, 0, 0, 0.8));
+  /* Gradient */
+
+  background-size: cover;
+  /* Slika pokriva celu pozadinu */
+  background-position: center;
+  /* Centriraj sliku */
+  background-repeat: no-repeat;
+  /* Onemogući ponavljanje slike */
 }
 
 /* Text Container 3 */
@@ -20,99 +25,91 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: linear-gradient(to right, black, rgb(77, 77, 77), rgb(119, 119, 119)); /* Gradijent za tekst */
-  background-clip: text; /* Primeni gradijent na tekst */
-  -webkit-text-fill-color: transparent; /* Ukloni ispunu teksta */
-  display: inline-block;
-
-  text-align: center; 
+  text-align: center;
   margin: 20px 0;
-  
-  text-decoration:none;
+  padding: 20px;
+  text-decoration: none;
   font-weight: bold;
+  color: var(--px-home-gradient-1);
+  /* Senka za dubinu */
 }
 
-.welcome-text  {
-  font-size: 2rem;
+/* Stil za welcome tekst */
+.welcome-text {
+  font-size: 3rem;
   margin-bottom: 10px;
+  font-family: var(--px-font);
+  color: var(--px-home-gradient-2);
+  /* Bela boja teksta za bolji kontrast */
+  letter-spacing: 3px;
+  font-weight: 600;
+  text-transform: uppercase;
+  /* Velika slova */
+  
+  text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.9);
 }
 
+
+
+/* Stil za glavni tekst */
 .main-text {
-  font-size: 4rem; /* Veličina glavnog naslova */
-  font-weight: bold; /* Podebljan tekst */
-  
-  
+  font-size: 6.5rem;
+  font-weight: bold;
+  font-family: var(--px-font);
+  color: var(--px-home-gradient-2);
+  /* Bela boja teksta */
+  text-transform: uppercase;
+  /* Velika slova */
+  letter-spacing: 4px;
+  /* Širi razmak između slova */
+  line-height: 1.3;
+  text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.9);
+  /* Senka za dubinu */
 }
+
+
+
 
 
 
 /* Responsive Adjustments */
 
-/* Tablet */
 @media (max-width: 1024px) {
-  
-  /*Scene 3*/
   .text-container3 {
     width: 50%;
   }
-
-  .text-container3 .text-box3 h6 {
-    font-size: 50px;
+  .text-container3 .welcome-text {
+    font-size: 1.5rem;
   }
-
-  .text-container3 .text-box3 h1 {
-    font-size: 36px;
+  .text-container3 .main-text {
+    font-size: 4rem;
   }
-
 }
 
 /* Mobilni */
 @media (max-width: 768px) {
-    /*Scene 3*/
   .text-container3 {
     width: 60%;
+    top: 55%;
   }
-
-  .text-container3 .text-box3 h6 {
-    font-size: 40px;
+  .text-container3 .welcome-text {
+    font-size: 1.3rem;
   }
-
-  .text-container3 .text-box3 h1 {
-    font-size: 28px;
+  .text-container3 .main-text {
+    font-size: 3.5rem;
   }
 }
 
 /* Manji mobilni uređaji */
 @media (max-width: 576px) {
-  /*Scene 3*/
   .text-container3 {
     width: 60%;
+    top: 58%;
   }
-
-  .text-container3 .text-box3 h6 {
-    font-size: 40px;
+  .text-container3 .welcome-text {
+    font-size: 1.3rem;
   }
-
-  .text-container3 .text-box3 h1 {
-    font-size: 28px;
-  }
-}
-
-/* Dodatna prilagodba za pejzažnu orijentaciju (horizontalna) */
-@media (orientation: landscape) and (max-width: 1024px){
-  .text-container2 {
-    top: 42%;
-    left: 40%;
-    scale: 1; /* Blago smanjena skala za horizontalnu orijentaciju */
-  }
-  .text-container2 .text-box2 h1 {
-    font-size: 70px; /* Prilagodba veličine naslova */
-  }
-  .text-container2 .text-box2 .loop-text {
-    font-size: 22px;
-  }
-  .home-container .scene2 {
-    background-position: bottom right calc(100% - 70%); /* Poravnanje slike u pejzažu */
+  .text-container3 .main-text {
+    font-size: 2.8rem;
   }
 }
-
