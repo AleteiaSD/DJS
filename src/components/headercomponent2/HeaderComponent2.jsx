@@ -1,19 +1,26 @@
-import React, { useState,useEffect,useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Navbar, Nav, Container, Row, Col, Offcanvas } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
-
-import "../../assets/header2.css";
+import { Navbar, Nav, Container, Row, Col } from "react-bootstrap";
+import { FaBars } from "react-icons/fa";
 import { ReactComponent as Logo } from "../../assets/imagesvg/logotandk.svg";
 import { ReactComponent as SerbiaFlag } from "../../assets/imagesvg/serbiaFlag.svg";
 import { ReactComponent as UnitedKingdomFlag } from "../../assets/imagesvg/unitedKingdomFlag.svg";
+import "../../assets/global.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../../assets/header2.css";
+
 const HeaderComponent2 = () => {
   const { t, i18n } = useTranslation();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isChecked, setIsChecked] = useState(i18n.language === "sr");
-  const sideMenuRef = useRef(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768); // Provera veličine ekrana
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 992); // Provera veličine ekrana
   
+  const handleLanguageChange = () => {
+    const newLanguage = isChecked ? "sr" : "en";
+    i18n.changeLanguage(newLanguage);
+    localStorage.setItem("language", newLanguage);
+    setIsChecked(!isChecked);
+  };
   useEffect(() => {
     // Učitavanje jezika iz lokalnog skladišta prilikom početnog učitavanja
     const storedLanguage = localStorage.getItem("language");
@@ -22,13 +29,13 @@ const HeaderComponent2 = () => {
       setIsChecked(storedLanguage === "en");
     }
   }, [i18n]);
+  
 
-  const handleLanguageChange = () => {
-    const newLanguage = isChecked ? "sr" : "en";
-    i18n.changeLanguage(newLanguage);
-    localStorage.setItem("language", newLanguage);
-    setIsChecked(!isChecked);
-  };
+
+
+
+
+
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -36,41 +43,50 @@ const HeaderComponent2 = () => {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
-// Funkcija za zatvaranje menija kada se klikne van njega
-const handleClickOutside = (event) => {
-  if (sideMenuRef.current && !sideMenuRef.current.contains(event.target)) {
-    closeMenu();
-  }
-};
- // Funkcija za promenu stanja mobilnog prikaza
- const handleResize = () => {
-  setIsMobile(window.innerWidth < 768);
-};
   useEffect(() => {
-    // Dodajte globalni event listener za klik
-    document.addEventListener("mousedown", handleClickOutside);
-    window.addEventListener("resize", handleResize); // Dodajte event listener za resize
+    const handleResize = () => {
+        setIsMobile(window.innerWidth < 992); // Prilagodi na osnovu veličine ekrana
+    };
+
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      // Očistite event listener
-      document.removeEventListener("mousedown", handleClickOutside);
-      window.removeEventListener("resize", handleResize); // Očistite event listener
-   };
-  });
+        window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+
+
+
+
+
+
+
+
+
+
 
   return (
     <header className="s-header">
-    <Navbar expand="lg" bg="dark" variant="dark">
-      <Container>
-        <Row className="w-100">
-           {/* Col 1 - Navigacija levo */}
-           <Col xs={4} className="d-flex justify-content-center">
+      <Navbar>
+        <Container>
+          <Row className="w-100">
+            {/* Col 1 - Navigacija levo */}
+            <Col xs={4} className="d-flex justify-content-center">
               <Nav>
-                <ul className="nav-links">
-                  <li><a href="/">{t('header.home')}</a></li>
-                  <li><a href="/events">{t('header.events')}</a></li>
-                  <li><a href="/aboutus">{t('header.aboutUs')}</a></li>
-                </ul>
+                {!isMobile && (
+                  <ul className="nav-links">
+                    <li>
+                      <a href="/">{t("header.home")}</a>
+                    </li>
+                    <li>
+                      <a href="/events">{t("header.events")}</a>
+                    </li>
+                    <li>
+                      <a href="/aboutus">{t("header.aboutUs")}</a>
+                    </li>
+                  </ul>
+                )}
               </Nav>
             </Col>
 
@@ -86,68 +102,104 @@ const handleClickOutside = (event) => {
 
             {/* Col 3 - Navigacija desno */}
             <Col xs={4} className="d-flex justify-content-center">
-              <Nav>
-                <ul className="nav-links">
-                  <li><a href="/gallery">{t('header.gallery')}</a></li>
-                  <li><a href="/contact">{t('header.contactUs')}</a></li>
-                  <li>
+              {!isMobile && (
+                <Nav>
+                  <ul className="nav-links">
+                    <li>
+                      <a href="/gallery">{t("header.gallery")}</a>
+                    </li>
+                    <li>
+                      <a href="/contact">{t("header.contactUs")}</a>
+                    </li>
+                    <li>
+                      <div className="language-switcher">
+                        <input
+                          type="checkbox"
+                          id="languageToggle"
+                          checked={isChecked}
+                          onChange={handleLanguageChange}
+                        />
+                        <div class="display">
+                          <label htmlFor="languageToggle">
+                            <div className="circle">
+                              <SerbiaFlag className="svgicon srbflag" />
+                              <UnitedKingdomFlag className="svgicon ukflag" />
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </Nav>
+              )}
+              {/* Toggle ikonica za mobilne uređaje */}
+              {isMobile && (
+                <FaBars onClick={toggleMenu} className="menu-toggle" />
+              )}
+            </Col>
+          </Row>
+        </Container>
+      </Navbar>
+
+
+
+
+
+      {/* Bočni meni */}
+      {isMenuOpen && isMobile && (
+        <div className={`side-menu ${isMenuOpen ? "open" : ""}`}>
+          <div className="menu-content">
+            <Nav>
+              <ul className="nav-links">
+                <li>
+                  <a href="/" onClick={closeMenu}>
+                    {t("header.home")}
+                  </a>
+                </li>
+                <li>
+                  <a href="/events" onClick={closeMenu}>
+                    {t("header.events")}
+                  </a>
+                </li>
+                <li>
+                  <a href="/aboutus" onClick={closeMenu}>
+                    {t("header.aboutUs")}
+                  </a>
+                </li>
+                <li>
+                  <a href="/gallery" onClick={closeMenu}>
+                    {t("header.gallery")}
+                  </a>
+                </li>
+                <li>
+                  <a href="/contact" onClick={closeMenu}>
+                    {t("header.contactUs")}
+                  </a>
+                </li>
+                <li>
                   <div className="language-switcher">
-                      <input
-                        type="checkbox"
-                        id="languageToggle"
-                        checked={isChecked}
-                        onChange={handleLanguageChange}
-                      />
-                      <div class="display">
+                    <input
+                      type="checkbox"
+                      id="languageToggle"
+                      checked={isChecked}
+                      onChange={handleLanguageChange}
+                    />
+                    <div class="display">
                       <label htmlFor="languageToggle">
                         <div className="circle">
-                            <SerbiaFlag className="svgicon srbflag" />
-                            <UnitedKingdomFlag className="svgicon ukflag" /> 
+                          <SerbiaFlag className="svgicon srbflag" />
+                          <UnitedKingdomFlag className="svgicon ukflag" />
                         </div>
                       </label>
-                      </div>
                     </div>
-                  </li>
-
-                  
-                </ul>
-              </Nav>
-            </Col>
-        </Row>
-      </Container>
-    </Navbar>
-{/* Offcanvas meni za mobilne uređaje */}
-<Offcanvas show={isMenuOpen} onHide={toggleMenu} placement="end" className="custom-offcanvas">
-        <Offcanvas.Body>
-          <Nav>
-            <ul className="nav-links">
-              <li><a href="/">{t('header.home')}</a></li>
-              <li><a href="/events">{t('header.events')}</a></li>
-              <li><a href="/aboutus">{t('header.aboutUs')}</a></li>
-              <li><a href="/gallery">{t('header.gallery')}</a></li>
-              <li><a href="/contact">{t('header.contactUs')}</a></li>
-              <li>
-                <div className="language-switcher">
-                  <input
-                    type="checkbox"
-                    id="languageToggle"
-                    checked={isChecked}
-                    onChange={handleLanguageChange}
-                  />
-                  <label htmlFor="languageToggle">
-                    <div className="circle">
-                      <SerbiaFlag className="svgicon srbflag" />
-                      <UnitedKingdomFlag className="svgicon ukflag" />
-                    </div>
-                  </label>
-                </div>
-              </li>
-            </ul>
-          </Nav>
-        </Offcanvas.Body>
-      </Offcanvas>
+                  </div>
+                </li>
+              </ul>
+            </Nav>
+          </div>
+        </div>
+      )}
     </header>
-  
   );
 };
 

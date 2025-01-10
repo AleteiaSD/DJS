@@ -1,5 +1,6 @@
 import React from "react";
 import Home from '../components/home/Home';
+import Home2 from '../components/home2/Home2';
 import NotFound from "../views/NotFound";
 import { Routes, Route } from "react-router-dom";
 import ScrollTopBehaviour from "../components/scrolltotop/ScrollTopBehaviour";
@@ -23,7 +24,7 @@ const AllRoutes = () => {
     
       <HeaderComponent2/>
       <Routes>
-        <Route path="/" element={<Home/>} />
+        <Route path="/" element={<Home2/>} />
         <Route path="*" element={<NotFound/>} />        
         <Route path="aboutus" element={<AboutUs/>} /> 
         <Route path="events" element={<EventsPage/>} /> 
