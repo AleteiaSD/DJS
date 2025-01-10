@@ -1,0 +1,233 @@
+/* Osnovni stilovi za header */
+.s-header {
+    background-color: transparent; /* Tamna pozadina */
+    text-align: center;  /* Centriranje sadržaja */
+}
+
+.navbar {
+    padding: 0.5rem 1rem;
+}
+
+/* Razmak između loga i navigacionih linkova */
+.navbar-brand-container {
+    display: flex;
+    justify-content: center;
+    margin-left: 33px;  /* Razmak sa leve strane */
+    margin-right: 33px;  /* Razmak sa desne strane */
+}
+
+.logotandk {
+    width: 300px;
+    height: 150px;
+    fill: rgb(109, 109, 109);
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;  /* Centriranje elemenata unutar navigacije */
+    gap: 23px;  /* Razmak između stavki */
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li a {
+    font-weight: bold;
+    text-align: center;
+    background: transparent;
+    transition: color .1s 0s ease-in-out;
+    outline: none;
+    font-style: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-links li a:hover {
+    color: #0808f5;  /* Promena boje pri hover-u */
+}
+
+/* Sakrij navbar-collapse na većim ekranima */
+.navbar-collapse {
+    display: none !important;
+}
+
+.navbar-collapse.show {
+    display: block !important;
+}
+/*==========================================================*/
+/*======================PROMENA JEZIKA======================*/
+/*==========================================================*/
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+}
+.language-switcher button {
+    background: transparent;
+    border: none;
+    font-weight: bold;
+    margin-left: 10px;
+}
+/* Dodavanje transition efekta za animaciju */
+input {
+    display: none;
+}
+.display * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.5s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+label {
+    width: 100px;
+    height: 50px;
+    border-radius: 999px;
+    background: #343a40;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.05) inset;
+    cursor: pointer;
+    position: relative;
+}
+.circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 99px;
+    background: #1F1F21;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05),
+    -10px -10px 30px rgba(0, 0, 0, 0.05) inset;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(10%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.svgicon {
+    width: 20px; /* Ikone će biti proporcionalno smanjene */
+    position: absolute;
+}
+.srbflag {
+    margin-top: 0%;
+    opacity: 1;
+    height: 45px;
+    width: 45px;
+}
+.ukflag {
+    margin-top: -50%;
+    opacity: 0;
+    
+    height: 45px;
+    width: 45px;
+}
+/* Input checked aktivira promenu */
+input[type=checkbox]:checked + .display label {
+    background: #1F1F21;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5) inset;
+}
+/* Pokreće promene za jezik (npr. sa zastavama ili ikonicama) */
+input[type=checkbox]:checked + .display label .circle {
+    left: 100%;
+    transform: translate(-110%, -50%);
+    background: #2C2C2F;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5),
+    -10px -10px 30px rgba(0, 0, 0, 0.5) inset;
+}
+input[type=checkbox]:checked + .display label .circle .srbflag {
+    margin-top: 150%;
+    opacity: 0;
+}
+input[type=checkbox]:checked + .display label .circle .ukflag {
+    margin-top: 0%;
+    opacity: 1;
+}
+label:active .circle {
+    width: 50px;
+}
+
+
+
+
+
+
+/*==========================================================*/
+/*======================RESPONZIVNOST=======================*/
+/*==========================================================*/
+/*======================RESPONZIVNOST=======================*/
+/* Responsivnost */
+@media (max-width: 992px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-brand-container {
+        margin-bottom: 10px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .language-switcher {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .nav-links {
+        display: none; /* Sakrij navigaciju na manjim ekranima */
+    }
+
+    .nav-links-mobile {
+        display: flex; /* Prikazivanje mobilnog menija */
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand-container img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .language-switcher button {
+        font-size: 14px;
+    }
+}
+
+/* Sakrij mobile meni na velikim ekranima */
+@media (min-width: 992px) {
+    .nav-links {
+        display: flex; /* Prikazivanje klasične navigacije */
+    }
+
+    .nav-links-mobile {
+        display: none;
+    }
+
+    .navbar-collapse {
+        display: none !important; /* Sakrij collapse meni na velikim ekranima */
+    }
+}
