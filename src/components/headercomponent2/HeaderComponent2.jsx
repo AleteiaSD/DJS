@@ -120,7 +120,7 @@ const HeaderComponent2 = () => {
                           onChange={handleLanguageChange}
                         />
                         <div class="display">
-                          <label htmlFor="languageToggle">
+                          <label className="display-label" htmlFor="languageToggle">
                             <div className="circle">
                               <SerbiaFlag className="svgicon srbflag" />
                               <UnitedKingdomFlag className="svgicon ukflag" />
@@ -185,7 +185,7 @@ const HeaderComponent2 = () => {
                       onChange={handleLanguageChange}
                     />
                     <div class="display">
-                      <label htmlFor="languageToggle">
+                      <label className="display-label" htmlFor="languageToggle">
                         <div className="circle">
                           <SerbiaFlag className="svgicon srbflag" />
                           <UnitedKingdomFlag className="svgicon ukflag" />

@@ -203,7 +203,7 @@
 
 
 
-    "contactme.name": "Kontaktirajte nas",
+    "contactme.name": "Kontakt",
     "contact.toastSuccess": "Poruka uspešno poslata!",
     "contact.toastError": "Došlo je do greške. Molimo pokušajte ponovo kasnije.",
 
@@ -220,6 +220,7 @@
 
     "contact.sendMessageBtn": "Pošalji poruku",
 
+    "contact.resetContactBtn": "Poništi",
 
     "contactinfo.h4": "Koja je vaša priča?",
     "contactinfo.p": "Uvek smo dostupni da napravimo najbolju žurku u gradu.\n\nSlobodno nas kontaktirajte.",

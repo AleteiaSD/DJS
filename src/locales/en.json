@@ -189,7 +189,10 @@
     "portfolio.link9": "Link 9",
     
 
-    "contactme.name": "Contact us",
+
+
+    
+    "contactme.name": "Contact",
     "contact.toastSuccess": "Message sent successfully!",
     "contact.toastError": "An error occurred. Please try again later.",
 
@@ -205,6 +208,8 @@
     "contact.typeCommentRequired": "Message is required.",
     
     "contact.sendMessageBtn": "Send Message",
+    
+    "contact.resetContactBtn": "Reset",
 
 
     "contactinfo.h4": "What’s your story?",

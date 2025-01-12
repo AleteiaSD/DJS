@@ -101,7 +101,7 @@ input {
 
 }
 
-label {
+.language-switcher label{ 
     width: 100px;
     height: 50px;
     border-radius: 999px;

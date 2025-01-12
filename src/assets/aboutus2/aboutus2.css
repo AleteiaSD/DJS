@@ -1,0 +1,77 @@
+.about-us2-container {
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.about-us2-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-us2-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.about-us2-header p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.dj-section {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.dj {
+  text-align: center;
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  max-width: 300px;
+}
+
+.dj-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.dj-image:hover {
+  transform: scale(1.05);
+}
+
+.description {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+.statistics {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  gap: 20px;
+}
+
+.stat {
+  background: #444;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  color: #f39c12;
+  margin-bottom: 10px;
+}

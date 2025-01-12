@@ -4,105 +4,106 @@
 
 /* Osnovne boje */
 :root {
-    --px-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Postavljanje Arial kao osnovnog fonta */
-    --px-font-alt: "Roboto", serif;
+  --px-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /* Postavljanje Arial kao osnovnog fonta */
+  --px-font-alt: "Roboto", serif;
 
-    --px-logo: #8b8b8b;
+  --px-logo: #8b8b8b;
 
-    --px-navbar: #1F1F21;
-    --px-navbar-white: #fff;
-    --px-navbar-hover: #333;
-    --px-navbar-lang-sw:  #343a40;
-    --px-navbar-lang-sw-cicle: #1F1F21;
-    --px-navbar-lang-sw-change: #2C2C2F;
-    --px-navbar-side-menu: #1F1F21;
-    --px-navbar-menu-toggle: #8b8b8b;
+  --px-navbar: #1F1F21;
+  --px-navbar-white: #fff;
+  --px-navbar-hover: #333;
+  --px-navbar-lang-sw: #343a40;
+  --px-navbar-lang-sw-cicle: #1F1F21;
+  --px-navbar-lang-sw-change: #2C2C2F;
+  --px-navbar-side-menu: #1F1F21;
+  --px-navbar-menu-toggle: #8b8b8b;
 
-    
-
-
-    --px-home-text-gradient: linear-gradient(to right, rgba(186, 186, 186, 0.8), rgba(0, 0, 0, 0.8));
- 
-    --px-home-gradient-1: #fff;
-
-    --px-home-gradient-2: #c4c4c4;
-   
-
-    --px-transparent: var(--px-transparent);
-    --px-theme: #6a11cb;
-    --px-gradient-end: #2575fc;
-    --px-bababa: #bababa;
-    --px-dark: #1c1c1c;
-    --px-white: #fff;
-
-    --px-black: #000;
-    --px-bg-1: #1c1c1c;
-    --px-bg-2: #2e2e2e;
-    --px-bg-3: #1c1c1c;
-    --px-gray: #f7f7ff;
-    --px-body: rgba(255, 255, 255, 0.8);
-    --px-body-light: #555;
-    --px-font-size: 15px;
-    --px-line-height: 1.7;
-    --px-red: #ff0000;
-
-    --px-phone-color: #2b0058;
-    
+  --px-home-text-gradient: linear-gradient(to right, rgba(186, 186, 186, 0.8), rgba(0, 0, 0, 0.8));
+  --px-home-gradient-1: #fff;
+  --px-home-gradient-2: #c4c4c4;
 
 
-    /* Breakpoints */
-    --px-media-xsm: 567px;
-    --px-media-sm: 767px;
-    --px-media-md: 991px;
-    --px-media-lg: 1200px;
+  --px-transparent: var(--px-transparent);
+  --px-theme: #6a11cb;
+  --px-gradient-end: #2575fc;
+  --px-bababa: #bababa;
+  --px-dark: #1c1c1c;
+  --px-white: #fff;
+
+  --px-black: #000;
+  --px-bg-1: #1c1c1c;
+  --px-bg-2: #2e2e2e;
+  --px-bg-3: #1c1c1c;
+  --px-gray: #f7f7ff;
+  --px-body: rgba(255, 255, 255, 0.8);
+  --px-body-light: #555;
+  --px-font-size: 15px;
+  --px-line-height: 1.7;
+  --px-red: #ff0000;
+
+
+
+
+  /* Breakpoints */
+  --px-media-xsm: 567px;
+  --px-media-sm: 767px;
+  --px-media-md: 991px;
+  --px-media-lg: 1200px;
 }
+
 /* Dodajemo osnovne stilove za celo telo i elemente koji sadrže sadržaj */
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%; /* Podesi visinu tela da bude 100% */
-    width: 100%;
-    overflow-x: hidden;
-  }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* Podesi visinu tela da bude 100% */
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /* Primer upotrebe varijabli */
 body {
-    font-family: var(--px-font);
-    font-size: var(--px-font-size);
-    line-height: var(--px-line-height);
-    color: var(--px-white);
+  font-family: var(--px-font);
+  font-size: var(--px-font-size);
+  line-height: var(--px-line-height);
+  color: var(--px-white);
 
-
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    overflow: -moz-scrollbars-none; /* Sakriva skrol trake u Firefoxu */
-  -ms-overflow-style: none; /* Sakriva skrol trake u Internet Exploreru i Edgeu */
-  scrollbar-width: none; /* Sakriva skrol trake u modernim preglednicima */
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: -moz-scrollbars-none;
+  /* Sakriva skrol trake u Firefoxu */
+  -ms-overflow-style: none;
+  /* Sakriva skrol trake u Internet Exploreru i Edgeu */
+  scrollbar-width: none;
+  /* Sakriva skrol trake u modernim preglednicima */
 }
-
-
 
 a {
-  text-decoration: none; /* Uklanja underline */
+  text-decoration: none;
 }
 
-a:hover, a:focus {
-  text-decoration: none; /* Osigurava da nema underline ni kod hovera */
+a:hover,
+a:focus {
+  text-decoration: none;
 }
 
 /* Prilagođeni skrol za celo telo i sve kontejnerske elemente sa skrolovanjem */
 ::-webkit-scrollbar {
-    width: 8px; /* Širina skrol trake */
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.5); /* Boja skrol "thumb" dela */
-    border-radius: 10px; /* Zaobljenost "thumb" dela */
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: transparent; /* Pozadina skrol trake */
-  }
-  
+  width: 8px;
+  /* Širina skrol trake */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
+  /* Boja skrol "thumb" dela */
+  border-radius: 10px;
+  /* Zaobljenost "thumb" dela */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  /* Pozadina skrol trake */
+}
