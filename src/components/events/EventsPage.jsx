@@ -21,6 +21,7 @@ const EventsPage = () => {
           header: true, // Oznaka da CSV ima zaglavlje (kolone)
           skipEmptyLines: true,
           complete: (result) => {
+                console.log(result.data.EventName ," --> ", result.data.ImageURL);
                 setEvents(result.data);
           },
 
@@ -28,8 +29,6 @@ const EventsPage = () => {
       } catch (err) {
         console.error("Error loading CSV:", err);
         setError("Unable to load events. Please try again later.");
-
-        console.log("NEKI ERROR")
       } finally {
         setLoading(false);
       }
@@ -37,7 +36,6 @@ const EventsPage = () => {
 
     fetchCSV();
     
-    console.log(events.ImageURL);
   }, [events]);
 
   if (loading) return <div>Loading...</div>;
@@ -51,7 +49,7 @@ const EventsPage = () => {
         {events.map((event, index) => (
           <div key={index} className="event-item">
             <img
-              src={event.ImageURL || '../../../public/photos/Events/E1.jpg'} // Default image fallback
+              src={process.env.PUBLIC_URL +event.ImageURL || '../../../public/photos/Events/E1.jpg'} // Default image fallback
               alt={event.EventName || 'Event Name'}
               className="event-image"
             />
