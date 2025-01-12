@@ -4,6 +4,8 @@
   background: linear-gradient(135deg, #1a1a1a, #333);
   padding: 20px;
   line-height: 1.6;
+  
+  height: 100vh;
 }
 
 .about-us2-header {
