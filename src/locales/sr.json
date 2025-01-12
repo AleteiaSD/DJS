@@ -224,6 +224,28 @@
 
     "contactinfo.h4": "Koja je vaša priča?",
     "contactinfo.p": "Uvek smo dostupni da napravimo najbolju žurku u gradu.\n\nSlobodno nas kontaktirajte.",
-    "footer.developedBy": "Web sajt razvio"
+    
+    "footer.developedBy": "Web sajt razvio",
+    "footer.pages": "Stranice",
+
+    "footer.contactDJs": "Kontaktirajte nas",
+
+
+    "footer.contactdesinger": "Kontaktirajte me",
+
+    "footer.address": "Addresa DJs",
+    
+    "footer.addressdesinger": "Addresa dizajnera",
+
+    "events.header": "Nastupi",
+    "events.date": "Datum: ",
+    "events.description": "Opis: ",
+    
+
+
+    "notfound.pagenotfound": "Stranica nije pronađena..",
+    "notfound.whoops": "Ups, izgleda da stranica koju ste tražili nije pronađena.",
+    "notfound.backtohome": "Povratak na početnu stranu"
+
 }
   

@@ -1,87 +1,91 @@
 /* Stil za galeriju */
 .gallery-section {
-  padding: 20px; /* Razmak oko galerije */
+  padding: 20px;
+  background: linear-gradient(to left, rgba(83, 80, 80, 0.8), rgba(0, 0, 0, 0.8));
 }
 
 /* Stil za naslov galerije */
 .gallery-title {
   text-align: center;
-  font-size: 2em;
-  margin-bottom: 20px;
+  font-size: 5em;
+  text-transform: uppercase;
+  font-family: var(--px-font);
+  font-weight:bold;
+  color: var(--px-bababa);
+  margin: 3% 0 3% 0;
 }
 
 /* Stil za kontejner galerije koji koristi grid */
 .gallery-section .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Dinamične kolone */
-  grid-gap: 20px; /* Razmak između slika */
+  grid-template-columns: repeat(auto-fill, minmax(480px, 1fr)); /* Dinamične kolone */
+  grid-template-rows: repeat(auto-fill, minmax(270px, 1fr)); /* Dinamične visine redova */
+ 
+  grid-gap: 35px; /* Razmak između slika */
   justify-items: center; /* Centriranje slika unutar grid ćelija */
   padding: 0;
 }
-
 /* Stil za svaki pojedinačni wrapper slika */
 .gallery-section .gallery-item-wrapper {
-  width: 100%; /* Širina svakog wrapper-a je 100% od kolone */
-  position: relative; /* Dodaje mogućnost pozicioniranja unutar wrapper-a */
+  position: relative;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 0px 6px rgba(255, 0, 0, 0.9);
+  box-shadow: 0 0px 6px rgba(27, 27, 27, 0.9);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Stil za slike unutar wrapper-a */
 .gallery-section .gallery-item-wrapper img {
-  width: 100%; /* Širina slike je 100% od širine wrapper-a */
-  height: auto; /* Visina slike zavisi od njenih proporcija */
-  object-fit: cover; /* Slika se prostire unutar wrapper-a, ali bez deformisanja */
-  object-position: center center; /* Slika je centrirana unutar wrapper-a */
+  width: 100%; /* Slika će imati širinu 100% od širine wrapper-a */
+  height: 100%; /* Visina slike će biti ista kao visina wrapper-a */
+  object-fit: cover; /* Slika će popuniti ceo prostor */
+  object-position: center; /* Slika će biti centrirana (središnja tačka) */
+}
+
+/* Stil za slike sa formatom 16:9 (landscape) - zauzimaju jedan red */
+.gallery-section .landscape {
+  grid-row: span 1; /* Slika zauzima samo jedan red */
+  aspect-ratio: 16/9; /* Omogućava pravilno skaliranje slike */
+}
+
+/* Stil za slike sa formatom 9:16 (portrait) - zauzimaju dva reda */
+.gallery-section .portrait {
+  grid-row: span 2; /* Slika zauzima dva reda */
+  aspect-ratio: 9/16; /* Omogućava pravilno skaliranje slike */
 }
 
 /* Hover efekat za sliku */
 .gallery-section .gallery-item-wrapper:hover {
-  transform: scale(1.05); /* Malo uvećava sliku kada je korisnik pređe */
-  box-shadow: 0 0px 12px rgba(255, 0, 0, 0.9); /* Uvećava senku pri hoveru */
+  transform: scale(1.01);
+  box-shadow: 0 0px 30px rgba(255, 255, 255, 0.9);
 }
+
+
+
 
 /* Lazy load efekat - blur dok se slika učitava */
 .lazy-load-image-loaded {
-  filter: blur(0); /* Uklanja blur efekat kada je slika učitana */
+  filter: blur(0);
 }
 
-/* Lightbox (ako koristiš Lightbox za prikaz slike u većem formatu) */
-.react-lightbox {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8); /* Tamna pozadina kad je Lightbox otvoren */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Responsive dizajn */
+@media (max-width: 768px) {
+  .gallery-section .gallery-title {
+    font-size: 1.5rem;
+  }
+
+  .gallery-section .container {
+    gap: 10px;
+  }
 }
 
-
-
-
-  /* Responsive dizajn */
-  @media (max-width: 768px) {
-    .gallery-section .gallery-title {
-      font-size: 1.5rem;
-    }
-  
-    .gallery-section .container {
-      gap: 10px;
-    }
+@media (max-width: 480px) {
+  .gallery-section .gallery-title {
+    font-size: 1.2rem;
   }
-  
-  @media (max-width: 480px) {
-    .gallery-section .gallery-title {
-      font-size: 1.2rem;
-    }
-  
-    .gallery-section .container {
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
+
+  .gallery-section .container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
-  
+}
+

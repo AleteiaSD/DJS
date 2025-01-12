@@ -214,7 +214,21 @@
 
     "contactinfo.h4": "What’s your story?",
     "contactinfo.p": "We are always available to throw the best party in town.\n\nFeel free to contact us.",
-    "footer.developedBy": "Developed by"
+    
+    
+    "footer.developedBy": "Developed by",
+    "footer.pages": "Pages",
+
+
+    
+    "events.header": "Events",
+    "events.date": "Date: ",
+    "events.description": "Description: ",
+
+    "notfound.pagenotfound": "Page Not Found..",
+    "notfound.whoops": "Whoops, it looks like the page you request wasn't found.",
+    "notfound.backtohome": "Back To Home"
+
 
 }
   

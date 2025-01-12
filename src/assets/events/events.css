@@ -1,18 +1,4 @@
-/* Dodajemo osnovne stilove za celo telo i elemente koji sadrže sadržaj */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%; /* Podesi visinu tela da bude 100% */
-  width: 100%;
-  overflow-x: hidden; /* Isključujemo horizontalno skrolovanje */
-}
-body {  
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  overflow-y: auto; /* Omogućavamo vertikalno skrolovanje */
-  
-}
+
 
 /* Glavni stil za sekciju događaja */
 .events-section {
@@ -21,16 +7,15 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background: linear-gradient(to right, var(--px-theme), var(--px-gradient-end));
+  background: linear-gradient(to right, rgba(186, 186, 186, 0.8), rgba(0, 0, 0, 0.8));
 
 }
 
-h1 {
+.events-section h1{
   text-align: center;
   margin-bottom: 30px;
-  color: var(--px-black);
+  color: var(--px-white);
 }
-
 /* Stil za listu događaja */
 .events-list {
   display: flex;
@@ -53,7 +38,7 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: var(--px-bg-2);
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
 }
 
 .event-image {
@@ -66,24 +51,42 @@ h1 {
 .event-details {
   flex: 1;
   margin-left: 20px;
-
+  word-wrap: break-word;  /* Omogućava prelamanje reči */
+  overflow-wrap: break-word;  /* Dodaje podršku za razbijanje reči na novom redu */
+  word-break: break-all; /* Prilagođava prelamanje reči */
 }
 
 .event-details h3 {
   margin: 0;
-  font-size: 1.5em;
-  color: var(--px-theme);
+  font-size: 3.5rem;
+  color: var(--px-black);
+  white-space: normal;  /* Osigurava da naslov može da pređe u novi red */
 
 }
 
 .event-details p {
-  margin: 5px 0;
-  color: var(--px-bababa);
+  margin: 15px 0 0 0;
+  color: var(--px-white);
+  font-size: 1.7rem;
+  text-align: left;
+  padding: 0;
+  white-space: normal; /* Dozvoljava prelamanje teksta u novom redu */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-all; /* Omogućava da se duge reči prelamaju */
+
 }
 
 .event-details p:first-child {
   font-weight: bold;
 }
+
+/* Sakrij dugmice za zumiranje */
+.ril-zoom-in ,
+.ril-zoom-out {
+  display: none !important; /* Ovaj stil potpuno sakriva dugmice za zumiranje */
+}
+
 
 /* Responzivnost za mobilne uređaje */
 @media (max-width: 768px) {
@@ -104,8 +107,16 @@ h1 {
   }
 
   .event-details h3 {
-    font-size: 1.2em; /* Manji font za mobilne uređaje */
+    font-size: 2.5rem; /* Manji font za mobilne uređaje */
   }
+
+  .event-details p {
+    font-size: 1.5rem; /* Manji font */
+    text-align: left; /* Poravnanje teksta levo */
+    margin: 10px 0 0 0; /* Uklonite bilo kakve margine koje mogu uticati na raspored */
+    padding: 0; /* Ako želite da uklonite unutrašnje razmake */
+  }
+
 }
 
 /* Responzivnost za vrlo male ekrane (telefon u portretnom režimu) */
@@ -120,6 +131,16 @@ h1 {
   }
 
   .event-details h3 {
-    font-size: 1em; /* Manji font */
+    font-size: 2rem; /* Manji font */
+  }
+  .event-details p {
+    font-size: 1.1rem; /* Manji font */
+    text-align: left; /* Poravnanje teksta levo */
+    margin: 8px 0 0 0; /* Uklonite bilo kakve margine koje mogu uticati na raspored */
+    padding: 0; /* Ako želite da uklonite unutrašnje razmake */
   }
 }
+
+
+
+

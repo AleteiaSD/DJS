@@ -60,6 +60,14 @@
     /* Promena boje pri hover-u */
 }
 
+
+
+/* Stil za aktivni link */
+.nav-links li.active a {
+    text-decoration: underline;
+  }
+  
+
 /* Sakrij navbar-collapse na većim ekranima */
 .navbar-collapse {
     display: none !important;
@@ -209,9 +217,34 @@ label:active .circle {
 .side-menu.menu-close {
     transform: translateX(100%);
 }
+
+.side-menu .menu-header .close-menu-button{
+    font-size: 2.5rem;
+    box-shadow: none;
+    position: absolute;  /* Postavljanje na apsolutnu poziciju */
+    top: 10px;           /* Opcionalno, možeš dodati razmak sa vrha */
+    right: 10px;         /* Postavljanje 10px od desne ivice side-menu-a */
+    background: none;    /* Bez pozadinske boje */
+    border: none;        /* Bez ivica dugmeta */
+    color: white;        /* Boja ikone */
+    cursor: pointer;     /* Pokazivač kursora na dugmetu */
+    padding: 0;          /* Uklanjanje unutrašnje margine */
+}
+
+
+
 .menu-content {
     display: flex;
     flex-direction: column;
+}
+.menu-content .nav-links{
+    margin-top: 50%;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    /* Centriranje elemenata unutar navigacije */
+    gap: 30px;
+
 }
 .menu-toggle {
     cursor: pointer;
@@ -222,6 +255,7 @@ label:active .circle {
 .menu-toggle :hover{
     color: var(--px-navbar-hover);
 }
+
 
 
 /*==========================================================*/

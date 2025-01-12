@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, var(--px-theme), var(--px-gradient-end));
+    background:   linear-gradient(to right, rgba(186, 186, 186, 0.8), rgba(0, 0, 0, 0.8));
     color: white;
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -51,7 +51,7 @@
   .btn-bar .px-btn {
     display: inline-block;
     padding: 15px 30px;
-    background: linear-gradient(to right, var(--px-theme), var(--px-gradient-end));
+    background: linear-gradient(to right,  rgb(119, 119, 119), rgb(77, 77, 77),black);
     color: white;
     font-weight: bold;
     text-transform: uppercase;
@@ -62,8 +62,8 @@
   }
   
   .btn-bar .px-btn:hover {
-    background: linear-gradient(to right, var(--px-gradient-end), var(--px-theme));
-    box-shadow: 0 8px 20px rgba(255, 85, 85, 0.4);
+    background: linear-gradient(to left,  rgb(119, 119, 119), rgb(77, 77, 77),black);
+    box-shadow: 0 8px 20px rgba(158, 153, 153, 0.4);
     transform: translateY(-5px);
   }
   

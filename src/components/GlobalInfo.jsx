@@ -1,4 +1,4 @@
-import { FaFacebookF, FaInstagram, FaTiktok , FaPhone } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTiktok , FaPhone, FaLinkedin } from "react-icons/fa";
 import { FaCompactDisc } from "react-icons/fa";
 import { GiMusicSpell,GiMusicalNotes,GiTechnoHeart,GiGuitarBassHead   } from "react-icons/gi";
 import { SiYoutubemusic,SiMusicbrainz } from "react-icons/si";
@@ -17,7 +17,12 @@ export const SocialShare = [
     { Social: <FaPhone />, link: 'tel:$(conctInfo.phone)' },
   ];
   
-
+  export const SocialShareDesinger = [
+    { Social: <FaFacebookF />, link: "https://www.facebook.com/dobri99/" },
+    { Social: <FaInstagram />, link: "https://www.instagram.com/_dobrijevic__/" },
+    { Social: <FaLinkedin />, link: "https://www.linkedin.com/in/stevan-dobrijevi%C4%87-5ab260252/" },
+    { Social: <FaPhone />, link: 'tel:+381691022966' },
+  ];
 export const ServiceContent = [
   {
     icon: <GiMusicSpell />,
