@@ -51,7 +51,7 @@ const EventsPage = () => {
         {events.map((event, index) => (
           <div key={index} className="event-item">
             <img
-              src={event.ImageURL || '/djstakikibo/public/photos/Events/E1.jpg'} // Default image fallback
+              src={event.ImageURL || '../../../public/photos/Events/E1.jpg'} // Default image fallback
               alt={event.EventName || 'Event Name'}
               className="event-image"
             />
