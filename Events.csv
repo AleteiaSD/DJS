@@ -1,10 +1,10 @@
 EventName,Date,ImageURL,Description
-Summer Festival,12/10/2024,"./public/photos/Events/E1.jpg",A fun-filled summer music festival.
-Winter Wonderland,12/25/2024,"./public/photos/Events/E2.jpg",Celebrate the holiday season.
-Spring Blossom,3/15/2025,"./public/photos/Events/E3.jpg",Experience the beauty of spring flowers.
-Tech Conference,11/20/2024,"./public/photos/Events/E4.jpg",Learn the latest in technology.
-Music Mania,10/5/2024,"./public/photos/Events/E1.jpg",A night of live music performances.
-Food Carnival,1/20/2025,"./public/photos/Events/E2.jpg",Enjoy a variety of cuisines.
-Art Expo,2/12/2025,"./public/photos/Events/E3.jpg",Discover stunning artworks from local artists.
-Dance Fiesta,9/8/2024,"./public/photos/Events/E4.jpg",Groove to the beats of the best DJs.
-Book Fair,11/1/2024,"./public/photos/Events/E1.jpg",Explore and buy amazing books.
+Summer Festival,12/10/2024,"../../../public/photos/Events/E1.jpg",A fun-filled summer music festival.
+Winter Wonderland,12/25/2024,"../../../public/photos/Events/E2.jpg",Celebrate the holiday season.
+Spring Blossom,3/15/2025,"../../../public/photos/Events/E3.jpg",Experience the beauty of spring flowers.
+Tech Conference,11/20/2024,"../../../public/photos/Events/E4.jpg",Learn the latest in technology.
+Music Mania,10/5/2024,"../../../public/photos/Events/E1.jpg",A night of live music performances.
+Food Carnival,1/20/2025,"../../../public/photos/Events/E2.jpg",Enjoy a variety of cuisines.
+Art Expo,2/12/2025,"../../../public/photos/Events/E3.jpg",Discover stunning artworks from local artists.
+Dance Fiesta,9/8/2024,"../../../public/photos/Events/E4.jpg",Groove to the beats of the best DJs.
+Book Fair,11/1/2024,"../../../public/photos/Events/E1.jpg",Explore and buy amazing books.
