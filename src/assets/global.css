@@ -61,6 +61,8 @@ body {
   /* Podesi visinu tela da bude 100% */
   width: 100%;
   overflow-x: hidden;
+  
+  font-family: var(--px-font);
 }
 
 /* Primer upotrebe varijabli */

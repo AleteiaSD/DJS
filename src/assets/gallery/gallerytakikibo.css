@@ -67,25 +67,43 @@
 .lazy-load-image-loaded {
   filter: blur(0);
 }
-
 /* Responsive dizajn */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .gallery-section .gallery-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .gallery-section .container {
     gap: 10px;
   }
+  .gallery-section .container {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Dinamične kolone */
+    grid-template-rows: repeat(auto-fill, minmax(135px, 1fr)); /* Dinamične visine redova */
+     }
+}
+/* Responsive dizajn */
+@media (max-width: 768px) {
+  .gallery-section .gallery-title {
+    font-size: 1.7rem;
+  }
+
+  .gallery-section .container {
+    gap: 10px;
+  }
+  .gallery-section .container {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Dinamične kolone */
+    grid-template-rows: repeat(auto-fill, minmax(135px, 1fr)); /* Dinamične visine redova */
+     }
 }
 
 @media (max-width: 480px) {
   .gallery-section .gallery-title {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   .gallery-section .container {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  }
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Dinamične kolone */
+    grid-template-rows: repeat(auto-fill, minmax(135px, 1fr)); /* Dinamične visine redova */
+     }
 }
 

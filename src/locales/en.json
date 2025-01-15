@@ -218,8 +218,15 @@
     
     "footer.developedBy": "Developed by",
     "footer.pages": "Pages",
+    "footer.contactDJs": "Contact us",
+    "footer.emailaddress": "Email address",
+    "footer.email": "takikibodjs@gmail.com",      
+    "footer.phonenumberphone": "Reservation",
+    "footer.phonenumber": "+381 62-96-12-186",
+    "footer.addressdesinger": "Designer address",
+    "footer.desinger": "Desinger Info: ",
 
-
+    
     
     "events.header": "Events",
     "events.date": "Date: ",

@@ -227,20 +227,17 @@
     
     "footer.developedBy": "Web sajt razvio",
     "footer.pages": "Stranice",
-
     "footer.contactDJs": "Kontaktirajte nas",
-
-
-    "footer.contactdesinger": "Kontaktirajte me",
-
-    "footer.address": "Addresa DJs",
-    
+    "footer.emailaddress": "Email adresa",    
+    "footer.email": "takikibodjs@gmail.com",    
+    "footer.phonenumberphone": "Rezervacije",
+    "footer.phonenumber": "+381 62-96-12-186",
     "footer.addressdesinger": "Addresa dizajnera",
+    "footer.desinger": "Dizajner informacije: ",
 
     "events.header": "Nastupi",
     "events.date": "Datum: ",
-    "events.description": "Opis: ",
-    
+    "events.description": "Opis: ",    
 
 
     "notfound.pagenotfound": "Stranica nije pronađena..",

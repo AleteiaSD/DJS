@@ -9,11 +9,13 @@ import EventsPage from "../components/events/EventsPage";
 import GalleryTakiKibo from "../components/gallery2/GalleryTakiKibo";
 import ContactSection2 from "../components/contact2/ContactSection2";
 import Footer from "../components/footer/FooterAnimation";
+import ScrollTopBehaviour from "../scrolltotop/ScrollTopBehaviour";
 
 
 const AllRoutes = () => {
   return (
     <>
+   <ScrollTopBehaviour />
       <HeaderComponent2/>
       <Routes>
         <Route path="/" element={<Home2/>} />

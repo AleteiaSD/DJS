@@ -1,10 +1,24 @@
 /* Osnovni stilovi za footer */
 .footer {
   width: 100%;
-  padding: 40px 0; /* Povećao sam padding da bi imao više prostora */
+  padding: 40px 0;
+  /* Povećao sam padding da bi imao više prostora */
   background-color: var(--px-navbar);
   color: var(--px-bababa);
   text-align: center;
+  
+  font-family: var(--px-font);
+}
+/* Kolona u footer-u */
+.footer .row {
+  display: flex;
+  flex-wrap: wrap; /* Omogućava prelazak na novi red na manjim ekranima */
+  justify-content: space-between;
+}
+/* Prvi i drugi col-6 u footer-u */
+.footer .col-6 {
+  width: 48%; /* Kolone zauzimaju 48% širine na velikim ekranima */
+  margin-bottom: 20px; /* Razmak između kolona */
 }
 
 .footer-content {
@@ -22,18 +36,20 @@
 .footer a:hover {
   color: var(--px-white);
 }
-
 /* Sekcija sa linkovima */
 .footer section {
   margin-bottom: 30px;
 }
 
 .footer h2 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-bottom: 15px;
-  color: var(--px-white); /* Osiguraj da naslovi budu vidljivi */
+  color: var(--px-white);
+  /* Osiguraj da naslovi budu vidljivi */
 }
-
+.footer p{
+  font-size: 1.5rem;
+}
 .footer .divided {
   list-style: none;
   padding: 0;
@@ -45,60 +61,26 @@
 
 .footer .divided li a {
   color: var(--px-white);
-  font-size: 0.9rem;
+  font-size: 1.2rem;
 }
 
 .footer .divided li a:hover {
-  color: var(--px-hover-color); /* Dodaj boju pri hover-u, npr. --px-hover-color */
+  color: var(--px-hover-color);
+  /* Dodaj boju pri hover-u, npr. --px-hover-color */
 }
-
-/* Sekcija za About */
-.footer .imp-medium {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 30px;
+.footer .divided li a::before {
+  content: "-";  /* Dodaje crticicu ispred */
+  margin-right: 5px; /* Razmak između crte i linka */
 }
-
-.footer .imp-medium h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: var(--px-white);
-}
-
-.footer .button {
-  background-color: var(--px-button-color); /* Osiguraj da dugme ima boju */
-  padding: 10px 20px;
-  color: var(--px-button-text);
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-.footer .button:hover {
-  background-color: var(--px-button-hover); /* Hover efekat za dugme */
-}
-
-/* Kontakt sekcija za DJ-eve */
-.contact-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-items: flex-start;
-  margin-top: 20px;
-}
-
-.contact-section h2 {
-  font-size: 1.2rem;
-  color: var(--px-white);
-  margin-bottom: 15px;
-}
-
+/* =============================================== */
+/* =============================================== */
+/* =============================================== */
 .contact-social-djs {
   display: flex;
-  flex-direction: column;
-  gap: 10px; /* Razmak između društvenih mreža */
-}
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center; /* Centriranje ikona horizontalno */
+  flex-wrap: wrap; /* Ako je potrebno, ikone će se prelomiti u sledeći red */}
 
 .contact-social-djs a {
   font-size: 1rem;
@@ -108,27 +90,16 @@
 }
 
 .contact-social-djs a:hover {
-  color: var(--px-hover-color); /* Hover boja za linkove */
+  color: var(--px-hover-color);
+  /* Hover boja za linkove */
 }
-
-.contact dl {
-  margin: 0;
-  font-size: 0.9rem;
-  color: var(--px-bababa);
-}
-
-.contact dt {
-  font-weight: bold;
+.contact-djs-info p {
+  font-size: 1rem;
   color: var(--px-white);
-  margin-bottom: 5px;
 }
-
-.contact dd {
-  margin: 0 0 10px;
-}
-
-
-/* Copyright */
+/* =============================================== */
+/* =================Copyright===================== */
+/* =============================================== */
 #copyright {
   text-align: center;
 }
@@ -136,7 +107,8 @@
 #copyright .menu-design {
   list-style: none;
   padding: 0;
-  margin-bottom: 5px; /* Smanjuje razmak između liste i ikonica */
+  margin-bottom: 5px;
+  /* Smanjuje razmak između liste i ikonica */
 }
 
 #copyright .menu-design li {
@@ -156,14 +128,14 @@
 #copyright .menu-design-icon {
   display: flex; /* Prikazuje stavke u jednom redu */
   justify-content: center; /* Centriranje ikonica horizontalno */
-  gap: 10px; /* Razmak između ikonica */
+  gap: 10px;  /* Razmak između ikonica */
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
 #copyright .menu-design-icon li {
-  display: flex; /* Centriranje sadržaja unutar svakog li elementa */
+  display: flex;/* Centriranje sadržaja unutar svakog li elementa */
   align-items: center;
   justify-content: center;
 }
@@ -171,6 +143,7 @@
 
 /* Responzivni dizajn */
 @media (max-width: 768px) {
+ 
   .footer-content {
     flex-direction: row;
     justify-content: space-between;
@@ -179,11 +152,13 @@
 
   .footer section {
     width: 30%;
-    margin-bottom: 0; /* Ukloni marginu između sekcija na većim ekranima */
+    margin-bottom: 0;
+    /* Ukloni marginu između sekcija na većim ekranima */
   }
 
   .footer .imp-medium {
-    width: 40%; /* Širina za About sekciju na većim ekranima */
+    width: 40%;
+    /* Širina za About sekciju na većim ekranima */
     align-items: flex-start;
   }
 
@@ -200,16 +175,6 @@
     font-size: 1rem;
   }
 
-  .contact-section {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .contact-social-djs,
-  .contact {
-    flex: 1; /* Svaka kolona zauzima jednaku širinu */
-  }
-
   #copyright .menu li {
     font-size: 1rem;
   }
@@ -218,9 +183,16 @@
 /* Stil za male ekrane */
 @media (max-width: 480px) {
   .footer {
-    padding: 10px 0;
+    padding: 30px 0;
+  }
+  .footer .row {
+    flex-direction: column; /* Postavlja kolone u vertikalni pravac */
   }
 
+  .footer .col-6 {
+    width: 100%; /* Svaka kolona zauzima 100% širine na manjim ekranima */
+    margin-bottom: 20px; /* Razmak između kolona */
+  }
   .footer-content {
     flex-direction: column;
     align-items: center;
@@ -240,12 +212,9 @@
     padding: 12px 24px;
   }
 
-  .contact-section {
-    flex-direction: column;
-  }
 
-  .contact-social-djs,
-  .contact {
+
+  .contact-social-djs {
     width: 100%;
   }
 
