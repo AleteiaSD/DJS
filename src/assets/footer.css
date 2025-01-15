@@ -47,9 +47,6 @@
   color: var(--px-white);
   /* Osiguraj da naslovi budu vidljivi */
 }
-.footer p{
-  font-size: 1.5rem;
-}
 .footer .divided {
   list-style: none;
   padding: 0;
